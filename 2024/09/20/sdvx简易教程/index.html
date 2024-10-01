@@ -1,0 +1,4310 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head hexo-theme='https://github.com/volantis-x/hexo-theme-volantis/#5.8.0'>
+  <meta name="generator" content="Hexo 5.4.2">
+  <meta name="Volantis" content="5.8.0">
+  <meta charset="utf-8">
+  <!-- SEO相关 -->
+  
+  <link rel="canonical" href="http://dsyacg.github.io/2024/09/20/sdvx简易教程/"/>
+  <!-- 渲染优化 -->
+    <meta http-equiv='x-dns-prefetch-control' content='on' />
+      <link rel='dns-prefetch' href='https://unpkg.com'>
+      <link rel="preconnect" href="https://unpkg.com" crossorigin>
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Content-Security-Policy" content=" default-src 'self' https:; block-all-mixed-content; base-uri 'self' https:; form-action 'self' https:; worker-src 'self' https:; connect-src 'self' https: *; img-src 'self' data: https: *; media-src 'self' https: *; font-src 'self' data: https: *; frame-src 'self' https: *; manifest-src 'self' https: *; child-src https:; script-src 'self' https: 'unsafe-inline' *; style-src 'self' https: 'unsafe-inline' *; ">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+  <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
+  <meta content="telephone=no" name="format-detection">
+  <!-- import head_begin begin -->
+  <!-- import head_begin end -->
+  <!-- Custom Files headBegin begin-->
+  
+  <!-- Custom Files headBegin end-->
+  <!-- front-matter head_begin begin -->
+  <!-- front-matter head_begin end -->
+    <link rel="shortcut icon" type='image/x-icon' href="https://gcore.jsdelivr.net/gh/dsyacg/files@master/mainicon.jpg">
+  <link rel="preload" href="/css/style.css" as="style">
+  <link rel="preload" href="https://unpkg.com/volantis-static@0.0.1654736714924/media/fonts/VarelaRound/VarelaRound-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+<link rel="preload" href="https://unpkg.com/volantis-static@0.0.1654736714924/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+
+  <!-- feed -->
+  <!-- 页面元数据 -->
+  <title>sdvx简易教程 - 当视研</title>
+  <meta name="keywords" content="音游,SDVX,">
+  <meta desc name="description" content="当视研 - Alice. - 当视研">
+  
+<meta property="og:type" content="article">
+<meta property="og:title" content="sdvx简易教程">
+<meta property="og:url" content="http://dsyacg.github.io/2024/09/20/sdvx%E7%AE%80%E6%98%93%E6%95%99%E7%A8%8B/index.html">
+<meta property="og:site_name" content="当视研">
+<meta property="og:description" content="sdvx简易教程SDVX，SounD VolteX的简称，是一个有着悠久历史的较为硬核的音乐游戏。想要在国内能欢乐的游玩该游戏，你可能需要为它付出一定的时间和精力，但相信它会值得的。  本文是由当视研mdzz同好会的各位群友协力之下产出，为了帮助你更好地使用手台与hdd入坑sdvx而编写的，内容从技巧到知识再到sdvx相关的趣闻等方方面面，希望这能成为你游玩的一大帮助。   分区：    SDVX">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+<meta property="article:published_time" content="2024-09-20T07:16:44.000Z">
+<meta property="article:modified_time" content="2024-09-20T19:01:10.773Z">
+<meta property="article:author" content="Alice.">
+<meta property="article:tag" content="音游">
+<meta property="article:tag" content="SDVX">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+  <style>
+    /* 首屏样式 */
+    #safearea {
+  display: none;
+}
+:root {
+  --color-site-body: #f4f4f4;
+  --color-site-bg: #f4f4f4;
+  --color-site-inner: #a6b1cb;
+  --color-site-footer: #a6b1cb;
+  --color-card: #fff;
+  --color-text: #444;
+  --color-block: #f6f6f6;
+  --color-inlinecode: #d56d28;
+  --color-codeblock: #f6f6f6;
+  --color-h1: #444;
+  --color-h2: #444;
+  --color-h3: #444;
+  --color-h4: #444;
+  --color-h5: #444;
+  --color-h6: #444;
+  --color-p: #444;
+  --color-list: #666;
+  --color-list-hl: #36ac91;
+  --color-meta: #888;
+  --color-read-bkg: #e0d8c8;
+  --color-read-post: #f8f1e2;
+  --color-copyright-bkg: #f5f5f5;
+}
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  outline: none;
+  margin: 0;
+  padding: 0;
+}
+*::-webkit-scrollbar {
+  height: 4px;
+  width: 4px;
+}
+*::-webkit-scrollbar-track-piece {
+  background: transparent;
+}
+*::-webkit-scrollbar-thumb {
+  background: #44d7b6;
+  cursor: pointer;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: #ff5722;
+}
+html {
+  color: var(--color-text);
+  width: 100%;
+  height: 100%;
+  font-family: UbuntuMono, "Varela Round", "PingFang SC", "Microsoft YaHei", Helvetica, Arial, Menlo, Monaco, monospace, sans-serif;
+  font-size: 16px;
+}
+html >::-webkit-scrollbar {
+  height: 4px;
+  width: 4px;
+}
+html >::-webkit-scrollbar-track-piece {
+  background: transparent;
+}
+html >::-webkit-scrollbar-thumb {
+  background: #54b5a0 linear-gradient(45deg, rgba(255,255,255,0.4) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0.4) 75%, transparent 75%, transparent);
+  cursor: pointer;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+}
+html >::-webkit-scrollbar-thumb:hover {
+  background: #54b5a0 linear-gradient(45deg, rgba(255,255,255,0.4) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0.4) 75%, transparent 75%, transparent);
+}
+body {
+  background-color: var(--color-site-body);
+  text-rendering: optimizelegibility;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  line-height: 1.6;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+body.modal-active {
+  overflow: hidden;
+}
+@media screen and (max-width: 680px) {
+  body.modal-active {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}
+a {
+  color: #2196f3;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.28s ease;
+  -webkit-transition: all 0.28s ease;
+  -khtml-transition: all 0.28s ease;
+  -moz-transition: all 0.28s ease;
+  -o-transition: all 0.28s ease;
+  -ms-transition: all 0.28s ease;
+}
+a:hover {
+  color: #ff5722;
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+ul,
+ol {
+  padding-left: 0;
+}
+ul li,
+ol li {
+  list-style: none;
+}
+header {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: block;
+}
+img {
+  border: 0;
+  background: none;
+  max-width: 100%;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  height: 0;
+  border: 0;
+  border-radius: 1px;
+  -webkit-border-radius: 1px;
+  border-bottom: 1px solid rgba(68,68,68,0.1);
+}
+button,
+input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+button {
+  overflow: visible;
+  text-transform: none;
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+@supports (backdrop-filter: blur(20px)) {
+  .blur {
+    background: rgba(255,255,255,0.9) !important;
+    backdrop-filter: saturate(200%) blur(20px);
+  }
+}
+.shadow {
+  box-shadow: 0 1px 2px 0px rgba(0,0,0,0.1);
+  -webkit-box-shadow: 0 1px 2px 0px rgba(0,0,0,0.1);
+}
+.shadow.floatable {
+  transition: all 0.28s ease;
+  -webkit-transition: all 0.28s ease;
+  -khtml-transition: all 0.28s ease;
+  -moz-transition: all 0.28s ease;
+  -o-transition: all 0.28s ease;
+  -ms-transition: all 0.28s ease;
+}
+.shadow.floatable:hover {
+  box-shadow: 0 2px 4px 0px rgba(0,0,0,0.1), 0 4px 8px 0px rgba(0,0,0,0.1), 0 8px 16px 0px rgba(0,0,0,0.1);
+  -webkit-box-shadow: 0 2px 4px 0px rgba(0,0,0,0.1), 0 4px 8px 0px rgba(0,0,0,0.1), 0 8px 16px 0px rgba(0,0,0,0.1);
+}
+#l_cover {
+  min-height: 64px;
+}
+.cover-wrapper {
+  top: 0;
+  left: 0;
+  max-width: 100%;
+  height: 100vh;
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+  flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -khtml-flex-wrap: nowrap;
+  -moz-flex-wrap: nowrap;
+  -o-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+  align-content: center;
+  color: var(--color-site-inner);
+  padding: 0 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: -100px;
+}
+.cover-wrapper .cover-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+}
+.cover-wrapper .cover-bg.lazyload:not(.loaded) {
+  opacity: 0;
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+}
+.cover-wrapper .cover-bg.lazyload.loaded {
+  animation-delay: 0s;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+  animation-name: fadeIn;
+}
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    filter: blur(12px);
+    transform: scale(1.02);
+    -webkit-transform: scale(1.02);
+    -khtml-transform: scale(1.02);
+    -moz-transform: scale(1.02);
+    -o-transform: scale(1.02);
+    -ms-transform: scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    filter: blur(12px);
+    transform: scale(1.02);
+    -webkit-transform: scale(1.02);
+    -khtml-transform: scale(1.02);
+    -moz-transform: scale(1.02);
+    -o-transform: scale(1.02);
+    -ms-transform: scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    filter: blur(12px);
+    transform: scale(1.02);
+    -webkit-transform: scale(1.02);
+    -khtml-transform: scale(1.02);
+    -moz-transform: scale(1.02);
+    -o-transform: scale(1.02);
+    -ms-transform: scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    filter: blur(12px);
+    transform: scale(1.02);
+    -webkit-transform: scale(1.02);
+    -khtml-transform: scale(1.02);
+    -moz-transform: scale(1.02);
+    -o-transform: scale(1.02);
+    -ms-transform: scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+.cover-wrapper .cover-body {
+  z-index: 1;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.cover-wrapper#full {
+  height: calc(100vh + 100px);
+  padding-bottom: 100px;
+}
+.cover-wrapper#half {
+  max-height: 640px;
+  min-height: 400px;
+  height: calc(36vh - 64px + 200px);
+}
+.cover-wrapper #scroll-down {
+  width: 100%;
+  height: 64px;
+  position: absolute;
+  bottom: 100px;
+  text-align: center;
+  cursor: pointer;
+}
+.cover-wrapper #scroll-down .scroll-down-effects {
+  color: #fff;
+  font-size: 24px;
+  line-height: 64px;
+  position: absolute;
+  width: 24px;
+  left: calc(50% - 12px);
+  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  animation: scroll-down-effect 1.5s infinite;
+  -webkit-animation: scroll-down-effect 1.5s infinite;
+  -khtml-animation: scroll-down-effect 1.5s infinite;
+  -moz-animation: scroll-down-effect 1.5s infinite;
+  -o-animation: scroll-down-effect 1.5s infinite;
+  -ms-animation: scroll-down-effect 1.5s infinite;
+}
+@-moz-keyframes scroll-down-effect {
+  0% {
+    top: 0;
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+  50% {
+    top: -16px;
+    opacity: 0.4;
+    -webkit-opacity: 0.4;
+    -moz-opacity: 0.4;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+@-webkit-keyframes scroll-down-effect {
+  0% {
+    top: 0;
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+  50% {
+    top: -16px;
+    opacity: 0.4;
+    -webkit-opacity: 0.4;
+    -moz-opacity: 0.4;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+@-o-keyframes scroll-down-effect {
+  0% {
+    top: 0;
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+  50% {
+    top: -16px;
+    opacity: 0.4;
+    -webkit-opacity: 0.4;
+    -moz-opacity: 0.4;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+@keyframes scroll-down-effect {
+  0% {
+    top: 0;
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+  50% {
+    top: -16px;
+    opacity: 0.4;
+    -webkit-opacity: 0.4;
+    -moz-opacity: 0.4;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+.cover-wrapper .cover-body {
+  margin-top: 64px;
+  margin-bottom: 100px;
+}
+.cover-wrapper .cover-body,
+.cover-wrapper .cover-body .top,
+.cover-wrapper .cover-body .bottom {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  -webkit-justify-content: center;
+  -khtml-justify-content: center;
+  -moz-justify-content: center;
+  -o-justify-content: center;
+  -ms-justify-content: center;
+  max-width: 100%;
+}
+.cover-wrapper .cover-body .bottom {
+  margin-top: 32px;
+}
+.cover-wrapper .cover-body .title {
+  font-family: "Varela Round", "PingFang SC", "Microsoft YaHei", Helvetica, Arial, Helvetica, monospace;
+  font-size: 3.125rem;
+  line-height: 1.2;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+.cover-wrapper .cover-body .subtitle {
+  font-size: 20px;
+}
+.cover-wrapper .cover-body .logo {
+  max-height: 120px;
+  max-width: calc(100% - 4 * 16px);
+}
+@media screen and (min-height: 1024px) {
+  .cover-wrapper .cover-body .title {
+    font-size: 3rem;
+  }
+  .cover-wrapper .cover-body .subtitle {
+    font-size: 1.05rem;
+  }
+  .cover-wrapper .cover-body .logo {
+    max-height: 150px;
+  }
+}
+.cover-wrapper .cover-body .m_search {
+  position: relative;
+  max-width: calc(100% - 16px);
+  width: 320px;
+  vertical-align: middle;
+}
+.cover-wrapper .cover-body .m_search .form {
+  position: relative;
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: block;
+  width: 100%;
+}
+.cover-wrapper .cover-body .m_search .icon,
+.cover-wrapper .cover-body .m_search .input {
+  transition: all 0.28s ease;
+  -webkit-transition: all 0.28s ease;
+  -khtml-transition: all 0.28s ease;
+  -moz-transition: all 0.28s ease;
+  -o-transition: all 0.28s ease;
+  -ms-transition: all 0.28s ease;
+}
+.cover-wrapper .cover-body .m_search .icon {
+  position: absolute;
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: block;
+  line-height: 2.5rem;
+  width: 32px;
+  top: 0;
+  left: 5px;
+  color: rgba(68,68,68,0.75);
+}
+.cover-wrapper .cover-body .m_search .input {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: block;
+  height: 2.5rem;
+  width: 100%;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  font-size: 0.875rem;
+  -webkit-appearance: none;
+  padding-left: 36px;
+  border-radius: 1.4rem;
+  -webkit-border-radius: 1.4rem;
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(10px);
+  border: none;
+  color: var(--color-text);
+}
+@media screen and (max-width: 500px) {
+  .cover-wrapper .cover-body .m_search .input {
+    padding-left: 36px;
+  }
+}
+.cover-wrapper .cover-body .m_search .input:hover {
+  background: rgba(255,255,255,0.8);
+}
+.cover-wrapper .cover-body .m_search .input:focus {
+  background: #fff;
+}
+.cover-wrapper .list-h {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -khtml-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -o-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  align-items: stretch;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+.cover-wrapper .list-h a {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1 0;
+  -ms-flex: 1 0;
+  flex: 1 0;
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+  font-weight: 600;
+}
+.cover-wrapper .list-h a img {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: block;
+  border-radius: 2px;
+  -webkit-border-radius: 2px;
+  margin: 4px;
+  min-width: 40px;
+  max-width: 44px;
+}
+@media screen and (max-width: 768px) {
+  .cover-wrapper .list-h a img {
+    min-width: 36px;
+    max-width: 40px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .cover-wrapper .list-h a img {
+    margin: 2px 4px;
+    min-width: 32px;
+    max-width: 36px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .cover-wrapper .list-h a img {
+    min-width: 28px;
+    max-width: 32px;
+  }
+}
+.cover-wrapper {
+  max-width: 100%;
+}
+.cover-wrapper.search .bottom .menu {
+  margin-top: 16px;
+}
+.cover-wrapper.search .bottom .menu .list-h a {
+  white-space: nowrap;
+  -webkit-box-direction: normal;
+  -moz-box-direction: normal;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  align-items: baseline;
+  padding: 2px;
+  margin: 4px;
+  color: var(--color-site-inner);
+  opacity: 0.75;
+  -webkit-opacity: 0.75;
+  -moz-opacity: 0.75;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  border-bottom: 2px solid transparent;
+}
+.cover-wrapper.search .bottom .menu .list-h a i {
+  margin-right: 4px;
+}
+.cover-wrapper.search .bottom .menu .list-h a p {
+  font-size: 0.9375rem;
+}
+.cover-wrapper.search .bottom .menu .list-h a:hover,
+.cover-wrapper.search .bottom .menu .list-h a.active,
+.cover-wrapper.search .bottom .menu .list-h a:active {
+  opacity: 1;
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+  border-bottom: 2px solid var(--color-site-inner);
+}
+@font-face {
+  font-family: 'UbuntuMono';
+  src: url("https://unpkg.com/volantis-static@0.0.1654736714924/media/fonts/UbuntuMono/UbuntuMono-Regular.ttf");
+  font-weight: 'normal';
+  font-style: 'normal';
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Varela Round';
+  src: url("https://unpkg.com/volantis-static@0.0.1654736714924/media/fonts/VarelaRound/VarelaRound-Regular.ttf");
+  font-weight: 'normal';
+  font-style: 'normal';
+  font-display: swap;
+}
+.l_header {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  width: 100%;
+  height: 64px;
+  background: var(--color-card);
+  box-shadow: 0 1px 2px 0px rgba(0,0,0,0.1);
+  -webkit-box-shadow: 0 1px 2px 0px rgba(0,0,0,0.1);
+}
+.l_header.auto {
+  transition: opacity 0.4s ease;
+  -webkit-transition: opacity 0.4s ease;
+  -khtml-transition: opacity 0.4s ease;
+  -moz-transition: opacity 0.4s ease;
+  -o-transition: opacity 0.4s ease;
+  -ms-transition: opacity 0.4s ease;
+  visibility: hidden;
+}
+.l_header.auto.show {
+  opacity: 1 !important;
+  -webkit-opacity: 1 !important;
+  -moz-opacity: 1 !important;
+  visibility: visible;
+}
+.l_header .container {
+  margin-left: 16px;
+  margin-right: 16px;
+}
+.l_header #wrapper {
+  height: 100%;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+.l_header #wrapper .nav-main,
+.l_header #wrapper .nav-sub {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+  flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -khtml-flex-wrap: nowrap;
+  -moz-flex-wrap: nowrap;
+  -o-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  justify-content: space-between;
+  -webkit-justify-content: space-between;
+  -khtml-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -o-justify-content: space-between;
+  -ms-justify-content: space-between;
+  align-items: center;
+}
+.l_header #wrapper .nav-main {
+  transition: all 0.28s ease;
+  -webkit-transition: all 0.28s ease;
+  -khtml-transition: all 0.28s ease;
+  -moz-transition: all 0.28s ease;
+  -o-transition: all 0.28s ease;
+  -ms-transition: all 0.28s ease;
+}
+.l_header #wrapper.sub .nav-main {
+  transform: translateY(-64px);
+  -webkit-transform: translateY(-64px);
+  -khtml-transform: translateY(-64px);
+  -moz-transform: translateY(-64px);
+  -o-transform: translateY(-64px);
+  -ms-transform: translateY(-64px);
+}
+.l_header #wrapper .nav-sub {
+  transition: all 0.28s ease;
+  -webkit-transition: all 0.28s ease;
+  -khtml-transition: all 0.28s ease;
+  -moz-transition: all 0.28s ease;
+  -o-transition: all 0.28s ease;
+  -ms-transition: all 0.28s ease;
+  opacity: 0;
+  -webkit-opacity: 0;
+  -moz-opacity: 0;
+  height: 64px;
+  width: calc(100% - 2 * 16px);
+  position: absolute;
+}
+.l_header #wrapper .nav-sub ::-webkit-scrollbar {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: none;
+}
+@media screen and (min-width: 2048px) {
+  .l_header #wrapper .nav-sub {
+    max-width: 55vw;
+    margin: auto;
+  }
+}
+.l_header #wrapper.sub .nav-sub {
+  opacity: 1;
+  -webkit-opacity: 1;
+  -moz-opacity: 1;
+}
+.l_header #wrapper .title {
+  position: relative;
+  color: var(--color-text);
+  padding-left: 24px;
+  max-height: 64px;
+}
+.l_header #wrapper .nav-main .title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  flex-shrink: 0;
+  line-height: 64px;
+  padding: 0 24px;
+  font-size: 1.25rem;
+  font-family: "Varela Round", "PingFang SC", "Microsoft YaHei", Helvetica, Arial, Helvetica, monospace;
+}
+.l_header #wrapper .nav-main .title img {
+  height: 64px;
+}
+.l_header .nav-sub {
+  max-width: 1080px;
+  margin: auto;
+}
+.l_header .nav-sub .title {
+  font-weight: bold;
+  font-family: UbuntuMono, "Varela Round", "PingFang SC", "Microsoft YaHei", Helvetica, Arial, Menlo, Monaco, monospace, sans-serif;
+  line-height: 1.2;
+  max-height: 64px;
+  white-space: normal;
+  flex-shrink: 1;
+}
+.l_header .switcher {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: none;
+  line-height: 64px;
+  align-items: center;
+}
+.l_header .switcher .s-toc {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .l_header .switcher .s-toc {
+    display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+    display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+    display: -ms-flexbox /* TWEENER - IE 10 */;
+    display: -webkit-flex /* NEW - Chrome */;
+    display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+    display: flex;
+  }
+}
+.l_header .switcher >li {
+  height: 48px;
+  transition: all 0.28s ease;
+  -webkit-transition: all 0.28s ease;
+  -khtml-transition: all 0.28s ease;
+  -moz-transition: all 0.28s ease;
+  -o-transition: all 0.28s ease;
+  -ms-transition: all 0.28s ease;
+  margin: 2px;
+}
+@media screen and (max-width: 500px) {
+  .l_header .switcher >li {
+    margin: 0 1px;
+    height: 48px;
+  }
+}
+.l_header .switcher >li >a {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+  justify-content: center;
+  -webkit-justify-content: center;
+  -khtml-justify-content: center;
+  -moz-justify-content: center;
+  -o-justify-content: center;
+  -ms-justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  padding: 0.85em 1.1em;
+  border-radius: 100px;
+  -webkit-border-radius: 100px;
+  border: none;
+  transition: all 0.28s ease;
+  -webkit-transition: all 0.28s ease;
+  -khtml-transition: all 0.28s ease;
+  -moz-transition: all 0.28s ease;
+  -o-transition: all 0.28s ease;
+  -ms-transition: all 0.28s ease;
+  color: #44d7b6;
+}
+.l_header .switcher >li >a:hover {
+  border: none;
+}
+.l_header .switcher >li >a.active,
+.l_header .switcher >li >a:active {
+  border: none;
+  background: var(--color-site-bg);
+}
+@media screen and (max-width: 500px) {
+  .l_header .switcher >li >a {
+    width: 36px;
+    height: 48px;
+  }
+}
+.l_header .nav-sub .switcher {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+}
+.l_header .m_search {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+  height: 64px;
+  width: 240px;
+  transition: all 0.28s ease;
+  -webkit-transition: all 0.28s ease;
+  -khtml-transition: all 0.28s ease;
+  -moz-transition: all 0.28s ease;
+  -o-transition: all 0.28s ease;
+  -ms-transition: all 0.28s ease;
+}
+@media screen and (max-width: 1024px) {
+  .l_header .m_search {
+    width: 44px;
+    min-width: 44px;
+  }
+  .l_header .m_search input::placeholder {
+    opacity: 0;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+  }
+  .l_header .m_search:hover {
+    width: 240px;
+  }
+  .l_header .m_search:hover input::placeholder {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+@media screen and (min-width: 500px) {
+  .l_header .m_search:hover .input {
+    width: 100%;
+  }
+  .l_header .m_search:hover .input::placeholder {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+@media screen and (max-width: 500px) {
+  .l_header .m_search {
+    min-width: 0;
+  }
+  .l_header .m_search input::placeholder {
+    opacity: 1;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+  }
+}
+.l_header .m_search .form {
+  position: relative;
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+.l_header .m_search .icon {
+  position: absolute;
+  width: 36px;
+  left: 5px;
+  color: var(--color-meta);
+}
+@media screen and (max-width: 500px) {
+  .l_header .m_search .icon {
+    display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+    display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+    display: none;
+  }
+}
+.l_header .m_search .input {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: block;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  line-height: 1.3;
+  width: 100%;
+  color: var(--color-text);
+  background: #fafafa;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  padding-left: 40px;
+  font-size: 0.875rem;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border: none;
+  transition: all 0.28s ease;
+  -webkit-transition: all 0.28s ease;
+  -khtml-transition: all 0.28s ease;
+  -moz-transition: all 0.28s ease;
+  -o-transition: all 0.28s ease;
+  -ms-transition: all 0.28s ease;
+}
+@media screen and (min-width: 500px) {
+  .l_header .m_search .input:focus {
+    box-shadow: 0 4px 8px 0px rgba(0,0,0,0.1);
+    -webkit-box-shadow: 0 4px 8px 0px rgba(0,0,0,0.1);
+  }
+}
+@media screen and (max-width: 500px) {
+  .l_header .m_search .input {
+    background: var(--color-block);
+    padding-left: 8px;
+    border: none;
+  }
+  .l_header .m_search .input:hover,
+  .l_header .m_search .input:focus {
+    border: none;
+  }
+}
+@media (max-width: 500px) {
+  .l_header .m_search {
+    left: 0;
+    width: 0;
+    overflow: hidden;
+    position: absolute;
+    background: #fff;
+    transition: all 0.28s ease;
+    -webkit-transition: all 0.28s ease;
+    -khtml-transition: all 0.28s ease;
+    -moz-transition: all 0.28s ease;
+    -o-transition: all 0.28s ease;
+    -ms-transition: all 0.28s ease;
+  }
+  .l_header .m_search .input {
+    border-radius: 32px;
+    -webkit-border-radius: 32px;
+    margin-left: 16px;
+    padding-left: 16px;
+  }
+  .l_header.z_search-open .m_search {
+    width: 100%;
+  }
+  .l_header.z_search-open .m_search .input {
+    width: calc(100% - 120px);
+  }
+}
+ul.m-pc >li>a {
+  color: inherit;
+  border-bottom: 2px solid transparent;
+}
+ul.m-pc >li>a:active,
+ul.m-pc >li>a.active {
+  border-bottom: 2px solid #44d7b6;
+}
+ul.m-pc li:hover >ul.list-v,
+ul.list-v li:hover >ul.list-v {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: block;
+}
+ul.nav-list-h {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: -ms-flexbox /* TWEENER - IE 10 */;
+  display: -webkit-flex /* NEW - Chrome */;
+  display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+  display: flex;
+  align-items: stretch;
+}
+ul.nav-list-h>li {
+  position: relative;
+  justify-content: center;
+  -webkit-justify-content: center;
+  -khtml-justify-content: center;
+  -moz-justify-content: center;
+  -o-justify-content: center;
+  -ms-justify-content: center;
+  height: 100%;
+  line-height: 2.4;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+}
+ul.nav-list-h>li >a {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 600;
+}
+ul.list-v {
+  z-index: 1;
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: none;
+  position: absolute;
+  background: var(--color-card);
+  box-shadow: 0 2px 4px 0px rgba(0,0,0,0.08), 0 4px 8px 0px rgba(0,0,0,0.08), 0 8px 16px 0px rgba(0,0,0,0.08);
+  -webkit-box-shadow: 0 2px 4px 0px rgba(0,0,0,0.08), 0 4px 8px 0px rgba(0,0,0,0.08), 0 8px 16px 0px rgba(0,0,0,0.08);
+  margin-top: -6px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  padding: 8px 0;
+}
+ul.list-v.show {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: block;
+}
+ul.list-v hr {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+ul.list-v >li {
+  white-space: nowrap;
+  word-break: keep-all;
+}
+ul.list-v >li.header {
+  font-size: 0.78125rem;
+  font-weight: bold;
+  line-height: 2em;
+  color: var(--color-meta);
+  margin: 8px 16px 4px;
+}
+ul.list-v >li.header i {
+  margin-right: 8px;
+}
+ul.list-v >li ul {
+  margin-left: 0;
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: none;
+  margin-top: -40px;
+}
+ul.list-v .aplayer-container {
+  min-height: 64px;
+  padding: 6px 16px;
+}
+ul.list-v >li>a {
+  transition: all 0.28s ease;
+  -webkit-transition: all 0.28s ease;
+  -khtml-transition: all 0.28s ease;
+  -moz-transition: all 0.28s ease;
+  -o-transition: all 0.28s ease;
+  -ms-transition: all 0.28s ease;
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: block;
+  color: var(--color-list);
+  font-size: 0.875rem;
+  font-weight: bold;
+  line-height: 36px;
+  padding: 0 20px 0 16px;
+  text-overflow: ellipsis;
+  margin: 0 4px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+}
+@media screen and (max-width: 1024px) {
+  ul.list-v >li>a {
+    line-height: 40px;
+  }
+}
+ul.list-v >li>a >i {
+  margin-right: 8px;
+}
+ul.list-v >li>a:active,
+ul.list-v >li>a.active {
+  color: var(--color-list-hl);
+}
+ul.list-v >li>a:hover {
+  color: var(--color-list-hl);
+  background: var(--color-site-bg);
+}
+.l_header .menu >ul>li>a {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: block;
+  padding: 0 8px;
+}
+.l_header .menu >ul>li>a >i {
+  margin-right: 4px;
+}
+.l_header ul.nav-list-h>li {
+  color: var(--color-list);
+  line-height: 64px;
+}
+.l_header ul.nav-list-h>li >a {
+  max-height: 64px;
+  overflow: hidden;
+  color: inherit;
+}
+.l_header ul.nav-list-h>li >a:active,
+.l_header ul.nav-list-h>li >a.active {
+  color: #44d7b6;
+}
+.l_header ul.nav-list-h>li:hover>a {
+  color: var(--color-list-hl);
+}
+.l_header ul.nav-list-h>li i.music {
+  animation: rotate-effect 1.5s linear infinite;
+  -webkit-animation: rotate-effect 1.5s linear infinite;
+  -khtml-animation: rotate-effect 1.5s linear infinite;
+  -moz-animation: rotate-effect 1.5s linear infinite;
+  -o-animation: rotate-effect 1.5s linear infinite;
+  -ms-animation: rotate-effect 1.5s linear infinite;
+}
+@-moz-keyframes rotate-effect {
+  0% {
+    transform: rotate(0);
+    -webkit-transform: rotate(0);
+    -khtml-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -o-transform: rotate(0);
+    -ms-transform: rotate(0);
+  }
+  25% {
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -khtml-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -khtml-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    -khtml-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -khtml-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes rotate-effect {
+  0% {
+    transform: rotate(0);
+    -webkit-transform: rotate(0);
+    -khtml-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -o-transform: rotate(0);
+    -ms-transform: rotate(0);
+  }
+  25% {
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -khtml-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -khtml-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    -khtml-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -khtml-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+  }
+}
+@-o-keyframes rotate-effect {
+  0% {
+    transform: rotate(0);
+    -webkit-transform: rotate(0);
+    -khtml-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -o-transform: rotate(0);
+    -ms-transform: rotate(0);
+  }
+  25% {
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -khtml-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -khtml-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    -khtml-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -khtml-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+  }
+}
+@keyframes rotate-effect {
+  0% {
+    transform: rotate(0);
+    -webkit-transform: rotate(0);
+    -khtml-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -o-transform: rotate(0);
+    -ms-transform: rotate(0);
+  }
+  25% {
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -khtml-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -khtml-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+    -khtml-transform: rotate(270deg);
+    -moz-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -khtml-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+  }
+}
+.menu-phone li ul.list-v {
+  right: calc(100% - 0.5 * 16px);
+}
+.menu-phone li ul.list-v ul {
+  right: calc(100% - 0.5 * 16px);
+}
+#wrapper {
+  max-width: 1080px;
+  margin: auto;
+}
+@media screen and (min-width: 2048px) {
+  #wrapper {
+    max-width: 55vw;
+  }
+}
+#wrapper .menu {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -webkit-flex: 1 1;
+  -ms-flex: 1 1;
+  flex: 1 1;
+  margin: 0 16px 0 0;
+}
+#wrapper .menu .list-v ul {
+  left: calc(100% - 0.5 * 16px);
+}
+.menu-phone {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: none;
+  margin-top: 16px;
+  right: 8px;
+  transition: all 0.28s ease;
+  -webkit-transition: all 0.28s ease;
+  -khtml-transition: all 0.28s ease;
+  -moz-transition: all 0.28s ease;
+  -o-transition: all 0.28s ease;
+  -ms-transition: all 0.28s ease;
+}
+.menu-phone ul {
+  right: calc(100% - 0.5 * 16px);
+}
+@media screen and (max-width: 500px) {
+  .menu-phone {
+    display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+    display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+    display: block;
+  }
+}
+.l_header {
+  max-width: 65vw;
+  left: calc((100% - 65vw) * 0.5);
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+@media screen and (max-width: 2048px) {
+  .l_header {
+    max-width: 1112px;
+    left: calc((100% - 1112px) * 0.5);
+  }
+}
+@media screen and (max-width: 1112px) {
+  .l_header {
+    left: 0;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .l_header .container {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .l_header #wrapper .nav-main .title {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .l_header #wrapper .nav-sub {
+    width: 100%;
+  }
+  .l_header #wrapper .nav-sub .title {
+    overflow-y: scroll;
+    margin-top: 2px;
+    padding: 8px 16px;
+  }
+  .l_header #wrapper .switcher {
+    display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+    display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+    display: -ms-flexbox /* TWEENER - IE 10 */;
+    display: -webkit-flex /* NEW - Chrome */;
+    display: flex /* NEW, Spec - Opera 12.1, Firefox 20+ */;
+    display: flex;
+    margin-right: 8px;
+  }
+  .l_header .menu {
+    display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+    display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+    display: none;
+  }
+}
+@media screen and (max-width: 500px) {
+  .list-v li {
+    max-width: 270px;
+  }
+}
+#u-search {
+  display: -webkit-box /* OLD - iOS 6-, Safari 3.1-6 */;
+  display: -moz-box /* OLD - Firefox 19- (buggy but mostly works) */;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 60px 20px;
+  z-index: 1001;
+}
+@media screen and (max-width: 680px) {
+  #u-search {
+    padding: 0px;
+  }
+}
+
+  </style>
+  <link rel="stylesheet" href="/css/style.css" media="print" onload="this.media='all';this.onload=null">
+  <noscript><link rel="stylesheet" href="/css/style.css"></noscript>
+  
+<script>
+if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMode))
+    document.write(
+	'<style>'+
+		'html{'+
+			'overflow-x: hidden !important;'+
+			'overflow-y: hidden !important;'+
+		'}'+
+		'.kill-ie{'+
+			'text-align:center;'+
+			'height: 100%;'+
+			'margin-top: 15%;'+
+			'margin-bottom: 5500%;'+
+		'}'+
+    '.kill-t{'+
+      'font-size: 2rem;'+
+    '}'+
+    '.kill-c{'+
+      'font-size: 1.2rem;'+
+    '}'+
+		'#l_header,#l_body{'+
+			'display: none;'+
+		'}'+
+	'</style>'+
+    '<div class="kill-ie">'+
+        `<span class="kill-t"><b>Sorry, your browser cannot access this site</b></span><br/>`+
+        `<span class="kill-c">Microsoft has terminated support for Internet Explorer (IE) 10 and earlier versions in 2016. <br/>There are great security risks to continue using it. Please use contemporary mainstream browsers to access.</span><br/>`+
+        `<a target="_blank" rel="noopener" href="https://blogs.windows.com/windowsexperience/2021/05/19/the-future-of-internet-explorer-on-windows-10-is-in-microsoft-edge/"><strong>Learn more ></strong></a>`+
+    '</div>');
+</script>
+
+
+<noscript>
+	<style>
+		html{
+			overflow-x: hidden !important;
+			overflow-y: hidden !important;
+		}
+		.kill-noscript{
+			text-align:center;
+			height: 100%;
+			margin-top: 15%;
+			margin-bottom: 5500%;
+		}
+    .kill-t{
+      font-size: 2rem;
+    }
+    .kill-c{
+      font-size: 1.2rem;
+    }
+		#l_header,#l_body{
+			display: none;
+		}
+	</style>
+    <div class="kill-noscript">
+        <span class="kill-t"><b>Sorry, your browser cannot access this site</b></span><br/>
+        <span class="kill-c">This page requires browser support (enable) JavaScript</span><br/>
+        <a target="_blank" rel="noopener" href="https://www.baidu.com/s?wd=启用JavaScript"><strong>Learn more ></strong></a>
+    </div>
+</noscript>
+
+
+  <script>
+  /************这个文件存放不需要重载的全局变量和全局函数*********/
+  window.volantis = {}; // volantis 全局变量
+  volantis.debug = "env"; // 调试模式
+  volantis.dom = {}; // 页面Dom see: /source/js/app.js etc.
+
+  volantis.GLOBAL_CONFIG ={
+    debug: "env",
+    cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
+    default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
+    lastupdate: new Date(1727763890448),
+    sidebar: {
+      for_page: ["category","tagcloud","webinfo","lastupdate"],
+      for_post: ["toc"],
+      webinfo: {
+        lastupd: {
+          enable: true,
+          friendlyShow: true
+        },
+        runtime: {
+          data: "2024/9/09",
+          unit: "天"
+        }
+      }
+    },
+    plugins: {
+      message: {"enable":true,"css":"https://unpkg.com/volantis-static@0.0.1654736714924/libs/izitoast/dist/css/iziToast.min.css","js":"https://unpkg.com/volantis-static@0.0.1654736714924/libs/izitoast/dist/js/iziToast.min.js","icon":{"default":"fa-solid fa-info-circle light-blue","quection":"fa-solid fa-question-circle light-blue"},"time":{"default":5000,"quection":20000},"position":"topRight","transitionIn":"bounceInLeft","transitionOut":"fadeOutRight","titleColor":"var(--color-text)","messageColor":"var(--color-text)","backgroundColor":"var(--color-card)","zindex":2147483647,"copyright":{"enable":true,"title":"֪ʶ��������Э��","message":"������ CC BY-NC-SA 4.0 Э�顣","icon":"far fa-copyright light-blue"},"aplayer":{"enable":true,"play":"fa-solid fa-play","pause":"fa-solid fa-pause"},"rightmenu":{"enable":true,"notice":true}},
+      fancybox: {"css":"https://unpkg.com/volantis-static@0.0.1654736714924/libs/@fancyapps/ui/dist/fancybox.css","js":"https://unpkg.com/volantis-static@0.0.1654736714924/libs/@fancyapps/ui/dist/fancybox.umd.js"},
+      
+      aplayer: {
+        id: 2122286004,
+        enable:true
+      },
+      
+      
+      
+    }
+  }
+
+  /******************** volantis.EventListener ********************************/
+  // 事件监听器 see: /source/js/app.js
+  volantis.EventListener = {}
+  // 这里存放pjax切换页面时将被移除的事件监听器
+  volantis.EventListener.list = []
+  //构造方法
+  function volantisEventListener(type, f, ele) {
+    this.type = type
+    this.f = f
+    this.ele = ele
+  }
+  // 移除事件监听器
+  volantis.EventListener.remove = () => {
+    volantis.EventListener.list.forEach(function (i) {
+      i.ele.removeEventListener(i.type, i.f, false)
+    })
+    volantis.EventListener.list = []
+  }
+  /******************** volantis.dom.$ ********************************/
+  // 注：这里没有选择器，也没有forEach一次只处理一个dom，这里重新封装主题常用的dom方法，返回的是dom对象，对象包含了以下方法，同时保留dom的原生API
+  function volantisDom(ele) {
+    if (!ele) ele = document.createElement("div")
+    this.ele = ele;
+    // ==============================================================
+    this.ele.find = (c) => {
+      let q = this.ele.querySelector(c)
+      if (q)
+        return new volantisDom(q)
+    }
+    // ==============================================================
+    this.ele.hasClass = (c) => {
+      return this.ele.className.match(new RegExp('(\\s|^)' + c + '(\\s|$)'));
+    }
+    this.ele.addClass = (c) => {
+      this.ele.classList.add(c);
+      return this.ele
+    }
+    this.ele.removeClass = (c) => {
+      this.ele.classList.remove(c);
+      return this.ele
+    }
+    this.ele.toggleClass = (c) => {
+      if (this.ele.hasClass(c)) {
+        this.ele.removeClass(c)
+      } else {
+        this.ele.addClass(c)
+      }
+      return this.ele
+    }
+    // ==============================================================
+    // 参数 r 为 true 表示pjax切换页面时事件监听器将被移除，false不移除
+    this.ele.on = (c, f, r = 1) => {
+      this.ele.addEventListener(c, f, false)
+      if (r) {
+        volantis.EventListener.list.push(new volantisEventListener(c, f, this.ele))
+      }
+      return this.ele
+    }
+    this.ele.click = (f, r) => {
+      this.ele.on("click", f, r)
+      return this.ele
+    }
+    this.ele.scroll = (f, r) => {
+      this.ele.on("scroll", f, r)
+      return this.ele
+    }
+    // ==============================================================
+    this.ele.html = (c) => {
+      // if(c=== undefined){
+      //   return this.ele.innerHTML
+      // }else{
+      this.ele.innerHTML = c
+      return this.ele
+      // }
+    }
+    // ==============================================================
+    this.ele.hide = (c) => {
+      this.ele.style.display = "none"
+      return this.ele
+    }
+    this.ele.show = (c) => {
+      this.ele.style.display = "block"
+      return this.ele
+    }
+    // ==============================================================
+    return this.ele
+  }
+  volantis.dom.$ = (ele) => {
+    return !!ele ? new volantisDom(ele) : null;
+  }
+  /******************** RunItem ********************************/
+  function RunItem() {
+    this.list = []; // 存放回调函数
+    this.start = () => {
+      for (var i = 0; i < this.list.length; i++) {
+        this.list[i].run();
+      }
+    };
+    this.push = (fn, name, setRequestAnimationFrame = true) => {
+      let myfn = fn
+      if (setRequestAnimationFrame) {
+        myfn = ()=>{
+          volantis.requestAnimationFrame(fn)
+        }
+      }
+      var f = new Item(myfn, name);
+      this.list.push(f);
+    };
+    this.remove = (name) =>{
+      for (let index = 0; index < this.list.length; index++) {
+        const e = this.list[index];
+        if (e.name == name) {
+          this.list.splice(index,1);
+        }
+      }
+    }
+    // 构造一个可以run的对象
+    function Item(fn, name) {
+      // 函数名称
+      this.name = name || fn.name;
+      // run方法
+      this.run = () => {
+        try {
+          fn()
+        } catch (error) {
+          console.log(error);
+        }
+      };
+    }
+  }
+  /******************** Pjax ********************************/
+  // /layout/_plugins/pjax/index.ejs
+  // volantis.pjax.send(callBack[,"callBackName"]) 传入pjax:send回调函数
+  // volantis.pjax.push(callBack[,"callBackName"]) 传入pjax:complete回调函数
+  // volantis.pjax.error(callBack[,"callBackName"]) 传入pjax:error回调函数
+  volantis.pjax = {};
+  volantis.pjax.method = {
+    complete: new RunItem(),
+    error: new RunItem(),
+    send: new RunItem(),
+  };
+  volantis.pjax = Object.assign(volantis.pjax, {
+    push: volantis.pjax.method.complete.push,
+    error: volantis.pjax.method.error.push,
+    send: volantis.pjax.method.send.push,
+  });
+  /******************** RightMenu ********************************/
+  // volantis.rightmenu.handle(callBack[,"callBackName"]) 外部菜单项控制
+  // 可在 volantis.mouseEvent 处获取右键事件
+  volantis.rightmenu = {};
+  volantis.rightmenu.method = {
+    handle: new RunItem(),
+  }
+  volantis.rightmenu = Object.assign(volantis.rightmenu, {
+    handle: volantis.rightmenu.method.handle.push,
+  });
+  /********************  Dark Mode  ********************************/
+  // /layout/_partial/scripts/darkmode.ejs
+  // volantis.dark.mode 当前模式 dark or light
+  // volantis.dark.toggle() 暗黑模式触发器
+  // volantis.dark.push(callBack[,"callBackName"]) 传入触发器回调函数
+  volantis.dark = {};
+  volantis.dark.method = {
+    toggle: new RunItem(),
+  };
+  volantis.dark = Object.assign(volantis.dark, {
+    push: volantis.dark.method.toggle.push,
+  });
+  /********************  Message  ********************************/
+  // VolantisApp.message
+  /********************  isMobile  ********************************/
+  // /source/js/app.js
+  // volantis.isMobile
+  // volantis.isMobileOld
+  /********************脚本动态加载函数********************************/
+  // volantis.js(src, cb)  cb 可以传入onload回调函数 或者 JSON对象 例如: volantis.js("src", ()=>{}) 或 volantis.js("src", {defer:true,onload:()=>{}})
+  // volantis.css(src)
+
+  // 返回Promise对象，如下方法同步加载资源，这利于处理文件资源之间的依赖关系，例如：APlayer 需要在 MetingJS 之前加载
+  // (async () => {
+  //     await volantis.js("...theme.plugins.aplayer.js.aplayer...")
+  //     await volantis.js("...theme.plugins.aplayer.js.meting...")
+  // })();
+
+  // 已经加入了setTimeout
+  volantis.js = (src, cb) => {
+    return new Promise(resolve => {
+      setTimeout(function () {
+        var HEAD = document.getElementsByTagName("head")[0] || document.documentElement;
+        var script = document.createElement("script");
+        script.setAttribute("type", "text/javascript");
+        if (cb) {
+          if (JSON.stringify(cb)) {
+            for (let p in cb) {
+              if (p == "onload") {
+                script[p] = () => {
+                  cb[p]()
+                  resolve()
+                }
+              } else {
+                script[p] = cb[p]
+                script.onload = resolve
+              }
+            }
+          } else {
+            script.onload = () => {
+              cb()
+              resolve()
+            };
+          }
+        } else {
+          script.onload = resolve
+        }
+        script.setAttribute("src", src);
+        HEAD.appendChild(script);
+      });
+    });
+  }
+  volantis.css = (src) => {
+    return new Promise(resolve => {
+      setTimeout(function () {
+        var link = document.createElement('link');
+        link.rel = "stylesheet";
+        link.href = src;
+        link.onload = resolve;
+        document.getElementsByTagName("head")[0].appendChild(link);
+      });
+    });
+  }
+  /********************按需加载的插件********************************/
+  // volantis.import.jQuery().then(()=>{})
+  volantis.import = {
+    jQuery: () => {
+      if (typeof jQuery == "undefined") {
+        return volantis.js("https://unpkg.com/volantis-static@0.0.1654736714924/libs/jquery/dist/jquery.min.js")
+      } else {
+        return new Promise(resolve => {
+          resolve()
+        });
+      }
+    }
+  }
+  /********************** requestAnimationFrame ********************************/
+  // 1、requestAnimationFrame 会把每一帧中的所有 DOM 操作集中起来，在一次重绘或回流中就完成，并且重绘或回流的时间间隔紧紧跟随浏览器的刷新频率，一般来说，这个频率为每秒60帧。
+  // 2、在隐藏或不可见的元素中，requestAnimationFrame 将不会进行重绘或回流，这当然就意味着更少的的 cpu，gpu 和内存使用量。
+  volantis.requestAnimationFrame = (fn)=>{
+    if (!window.requestAnimationFrame) {
+      window.requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame;
+    }
+    window.requestAnimationFrame(fn)
+  }
+  /************************ layoutHelper *****************************************/
+  volantis.layoutHelper = (helper, html, opt)=>{
+    opt = Object.assign({clean:false, pjax:true}, opt)
+    function myhelper(helper, html, clean) {
+      volantis.tempDiv = document.createElement("div");
+      volantis.tempDiv.innerHTML = html;
+      let layoutHelper = document.querySelector("#layoutHelper-"+helper)
+      if (layoutHelper) {
+        if (clean) {
+          layoutHelper.innerHTML = ""
+        }
+        layoutHelper.append(volantis.tempDiv);
+      }
+    }
+    myhelper(helper, html, opt.clean)
+    if (opt.pjax) {
+      volantis.pjax.push(()=>{
+        myhelper(helper, html, opt.clean)
+      },"layoutHelper-"+helper)
+    }
+  }
+  /****************************** 滚动事件处理 ****************************************/
+  volantis.scroll = {
+    engine: new RunItem(),
+    unengine: new RunItem(),
+  };
+  volantis.scroll = Object.assign(volantis.scroll, {
+    push: volantis.scroll.engine.push,
+  });
+  // 滚动条距离顶部的距离
+  volantis.scroll.getScrollTop = () =>{
+    let scrollPos;
+    if (window.pageYOffset) {
+      scrollPos = window.pageYOffset;
+    } else if (document.compatMode && document.compatMode != 'BackCompat') {
+      scrollPos = document.documentElement.scrollTop;
+    } else if (document.body) {
+      scrollPos = document.body.scrollTop;
+    }
+    return scrollPos;
+  }
+  // 使用 requestAnimationFrame 处理滚动事件
+  // `volantis.scroll.del` 中存储了一个数值, 该数值检测一定时间间隔内滚动条滚动的位移, 数值的检测频率是浏览器的刷新频率. 数值为正数时, 表示向下滚动. 数值为负数时, 表示向上滚动.
+  volantis.scroll.handleScrollEvents = () => {
+    volantis.scroll.lastScrollTop = volantis.scroll.getScrollTop()
+    function loop() {
+      const scrollTop = volantis.scroll.getScrollTop();
+      if (volantis.scroll.lastScrollTop !== scrollTop) {
+        volantis.scroll.del = scrollTop - volantis.scroll.lastScrollTop;
+        volantis.scroll.lastScrollTop = scrollTop;
+        // if (volantis.scroll.del > 0) {
+        //   console.log("向下滚动");
+        // } else {
+        //   console.log("向上滚动");
+        // }
+        // 注销过期的unengine未滚动事件
+        volantis.scroll.unengine.list=[]
+        volantis.scroll.engine.start();
+      }else{
+        volantis.scroll.unengine.start();
+      }
+      volantis.requestAnimationFrame(loop)
+    }
+    volantis.requestAnimationFrame(loop)
+  }
+  volantis.scroll.handleScrollEvents()
+  volantis.scroll.ele = null;
+  // 触发页面滚动至目标元素位置
+  volantis.scroll.to = (ele, option = {}) => {
+    if (!ele) return;
+    volantis.scroll.ele = ele;
+    // 默认配置
+    opt = {
+      top: ele.getBoundingClientRect().top + document.documentElement.scrollTop,
+      behavior: "smooth"
+    }
+    // 定义配置
+    if ("top" in option) {
+      opt.top = option.top
+    }
+    if ("behavior" in option) {
+      opt.behavior = option.behavior
+    }
+    if ("addTop" in option) {
+      opt.top += option.addTop
+    }
+    if (!("observerDic" in option)) {
+      option.observerDic = 100
+    }
+    // 滚动
+    window.scrollTo(opt);
+    // 监视器
+    // 监视并矫正元素滚动到指定位置
+    // 用于处理 lazyload 引起的 cls 导致的定位失败问题
+    // option.observer = false
+    if (option.observer) {
+      setTimeout(() => {
+        if (volantis.scroll.ele != ele) {
+          return
+        }
+        volantis.scroll.unengine.push(() => {
+          let me = ele.getBoundingClientRect().top
+          if(!(me >= -option.observerDic && me <= option.observerDic)){
+            volantis.scroll.to(ele, option)
+          }
+          volantis.scroll.unengine.remove("unengineObserver")
+        },"unengineObserver")
+      },1000)
+    }
+  }
+  /********************** Content Visibility ********************************/
+  // 见 source/css/first.styl 如果遇到任何问题 删除 .post-story 即可
+  // 一个元素被声明 content-visibility 属性后 如果元素不在 viewport 中 浏览器不会计算其后代元素样式和属性 从而节省 Style & Layout 耗时
+  // content-visibility 的副作用: 锚点失效 等等(实验初期 暂不明确), 使用此方法清除样式
+  volantis.cleanContentVisibility = ()=>{
+    if (document.querySelector(".post-story")) {
+      console.log("cleanContentVisibility");
+      document.querySelectorAll(".post-story").forEach(e=>{
+        e.classList.remove("post-story")
+      })
+    }
+  }
+  /******************************************************************************/
+  /******************************************************************************/
+  /******************************************************************************/
+  //图像加载出错时的处理
+  function errorImgAvatar(img) {
+    img.src = "https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg";
+    img.onerror = null;
+  }
+  function errorImgCover(img) {
+    img.src = "https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg";
+    img.onerror = null;
+  }
+  /******************************************************************************/
+</script>
+
+  <!-- import head_end begin -->
+  <!-- import head_end end -->
+  <!-- Custom Files headEnd begin-->
+  
+  <!-- Custom Files headEnd end-->
+  <!-- front-matter head_end begin -->
+  <!-- front-matter head_end end -->
+</head>
+  <body itemscope itemtype="http://schema.org/WebPage">
+    <!-- import body_begin begin-->
+    <!-- import body_begin end-->
+    <!-- Custom Files bodyBegin begin-->
+    
+    <!-- Custom Files bodyBegin end-->
+    <!-- front-matter body_begin begin -->
+    <!-- front-matter body_begin end -->
+    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow floatable blur " style='opacity: 0' >
+  <div class='container'>
+  <div id='wrapper'>
+    <div class='nav-sub'>
+      <p class="title"></p>
+      <ul class='switcher nav-list-h m-phone' id="pjax-header-nav-list">
+        <li><a id="s-comment" class="fa-solid fa-comments fa-fw" target="_self"  href="/" onclick="return false;" title="comment"></a></li>
+        
+          <li><a id="s-toc" class="s-toc fa-solid fa-list fa-fw" target="_self"  href="/" onclick="return false;" title="toc"></a></li>
+        
+      </ul>
+    </div>
+		<div class="nav-main">
+      
+        
+        <a class="title flat-box" target="_self" href='/'>
+          
+            <img no-lazy class='logo' src='https://gcore.jsdelivr.net/gh/dsyacg/files@master/mainicon.jpg'/>
+          
+          
+          
+        </a>
+      
+
+			<div class='menu navigation'>
+				<ul class='nav-list-h m-pc'>
+          
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/" title="日志"
+                  
+                  
+                  
+                    active-action="action-home"
+                  >
+                  日志
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/categories/" title="分类"
+                  
+                  
+                  
+                    active-action="action-categories"
+                  >
+                  分类
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/tags/" title="标签"
+                  
+                  
+                  
+                    active-action="action-tags"
+                  >
+                  标签
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/archives/" title="归档"
+                  
+                  
+                  
+                    active-action="action-archives"
+                  >
+                  归档
+                </a>
+                
+              </li>
+            
+          
+          
+            
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/about/" title="关于"
+                  
+                  
+                  
+                    active-action="action-about"
+                  >
+                  关于
+                </a>
+                
+              </li>
+            
+          
+          
+				</ul>
+			</div>
+      
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <i class="icon fa-solid fa-search fa-fw"></i>
+          <input type="text" class="input u-search-input" placeholder="Search..." />
+        </form>
+      </div>
+      
+
+			<ul class='switcher nav-list-h m-phone'>
+				
+					<li><a class="s-search fa-solid fa-search fa-fw" target="_self" href="/" onclick="return false;" title="search"></a></li>
+				
+				<li>
+          <a class="s-menu fa-solid fa-bars fa-fw" target="_self" href="/" onclick="return false;" title="menu"></a>
+          <ul class="menu-phone list-v navigation white-box">
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/" title="日志"
+                  
+                  
+                  
+                    active-action="action-home"
+                  >
+                  日志
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/categories/" title="分类"
+                  
+                  
+                  
+                    active-action="action-categories"
+                  >
+                  分类
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/tags/" title="标签"
+                  
+                  
+                  
+                    active-action="action-tags"
+                  >
+                  标签
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/archives/" title="归档"
+                  
+                  
+                  
+                    active-action="action-archives"
+                  >
+                  归档
+                </a>
+                
+              </li>
+            
+          
+            
+              
+            
+              <li>
+                <a class="menuitem flat-box faa-parent animated-hover"
+                href="/about/" title="关于"
+                  
+                  
+                  
+                    active-action="action-about"
+                  >
+                  关于
+                </a>
+                
+              </li>
+            
+          
+            
+          </ul>
+        </li>
+			</ul>
+
+      <!-- Custom Files header begin -->
+      
+      <!-- Custom Files header end -->
+		</div>
+	</div>
+  </div>
+</header>
+
+    <div id="l_body">
+      <div id="l_cover">
+  
+    
+      <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
+      <div id="half" class='cover-wrapper post search' style="display: ;">
+        
+  <div class='cover-bg lazyload placeholder' data-bg="https://gcore.jsdelivr.net/gh/dsyacg/files@master/ray6.jpg"></div>
+
+<div class='cover-body'>
+  <div class='top'>
+    
+    
+    
+  </div>
+  <div class='bottom'>
+    
+      <div class="m_search">
+        <form name="searchform" class="form u-search-form">
+          <input type="text" class="input u-search-input" placeholder="ニャー(≧ω≦)ニャー" />
+          <i class="icon fa-solid fa-search fa-fw"></i>
+        </form>
+      </div>
+    
+    <div class='menu navigation'>
+      <div class='list-h'>
+        
+          
+            <a href="/"
+              
+              
+              active-action="action-home">
+              <p>主页</p>
+            </a>
+          
+            <a href="/categories/"
+              
+              
+              active-action="action-categories">
+              <p>分类</p>
+            </a>
+          
+            <a href="/tags/"
+              
+              
+              active-action="action-tags">
+              <p>标签</p>
+            </a>
+          
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+        <div id="scroll-down" style="display: none;"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
+      </div>
+    
+  
+</div>
+
+      <div id="safearea">
+        <div class="body-wrapper">
+          
+<div id="l_main" class=''>
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
+  <link itemprop="mainEntityOfPage" href="http://dsyacg.github.io/2024/09/20/sdvx简易教程/">
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="当视研">
+  </span>
+  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
+    <meta itemprop="name" content="当视研">
+    <meta itemprop="description" content="当视研">
+  </span>
+  
+
+
+  
+    <span hidden>
+      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+    </span>
+  
+  <div class="article-meta" id="top">
+    
+    
+    
+      <h1 class="title" itemprop="name headline">
+        sdvx简易教程
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' target="_blank" href="https://space.bilibili.com/598065149" rel="nofollow noopener">
+    <img itemprop="image" src="https://gcore.jsdelivr.net/gh/dsyacg/files@master/mdzz.jpg" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/dsyacg/files@master/mdzz.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">当视研MDZZ音游同好会</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class='new-meta-item category'>
+    <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
+    <a class="category-link" href="/categories/%E7%A4%BE%E5%91%98%E6%8A%95%E7%A8%BF/">社员投稿</a>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/%E7%A4%BE%E5%91%98%E6%8A%95%E7%A8%BF/" itemprop="url"><span itemprop="name">社员投稿</span></a>
+      </span>
+    
+  </div>
+
+
+          
+        
+          
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2024-09-20T15:16:44+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：Sep 20, 2024</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class="new-meta-item wordcount">
+    <a class='notlink'>
+      <i class="fa-solid fa-keyboard fa-fw" aria-hidden="true"></i>
+      <p>8.4k words</p>
+    </a>
+  </div>
+  <div class="new-meta-item readtime">
+    <a class='notlink'>
+      <i class="fa-solid fa-hourglass-half fa-fw" aria-hidden="true"></i>
+      <p>29 min</p>
+    </a>
+  </div>
+
+
+          
+        
+          
+            
+
+
+
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
+      </div>
+    
+  </div>
+
+
+  <div id="layoutHelper-page-plugins"></div>
+  <div id="post-body" itemprop="articleBody">
+    <h1 id="sdvx简易教程"><a href="#sdvx简易教程" class="headerlink" title="sdvx简易教程"></a>sdvx简易教程</h1><p><img src="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/image.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/image.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><br>SDVX，SounD VolteX的简称，是一个有着悠久历史的较为硬核的音乐游戏。想要在国内能欢乐的游玩该游戏，你可能需要为它付出一定的时间和精力，但相信它会值得的。</p>
+<blockquote>
+<p>本文是由当视研mdzz同好会的各位群友协力之下产出，为了帮助你更好地使用手台与hdd入坑sdvx而编写的，内容从技巧到知识再到sdvx相关的趣闻等方方面面，希望这能成为你游玩的一大帮助。</p>
+</blockquote>
+<hr>
+<p>分区：  </p>
+<ol>
+<li>SDVX是一个什么样的音乐游戏，适合什么样的音游玩家  </li>
+<li>进行游玩的前置准备（手台，HDD等）  </li>
+<li>如何打歌（核心内容：手法，旋钮，技巧等）  </li>
+<li>SDVX歌曲推荐 16、17、18  </li>
+<li>SDVX的其他知识（不知道也不影响你打歌的内容）</li>
+</ol>
+<h2 id="一、为什么选择SDVX"><a href="#一、为什么选择SDVX" class="headerlink" title="一、为什么选择SDVX"></a>一、为什么选择SDVX</h2><p>我的牛子让我玩的</p>
+<h2 id="二、游玩的事先准备"><a href="#二、游玩的事先准备" class="headerlink" title="二、游玩的事先准备"></a>二、游玩的事先准备</h2><h3 id="1、手台"><a href="#1、手台" class="headerlink" title="1、手台"></a>1、手台</h3><p>想打sdvx，首先建议你搞一个手台。并且sdvx会非常吵，在目前比较方便买到手台的街机音游中应该是最吵的，所以建议你搞定你的舍友。同时你还可选一个显示器（把笔记本竖过来也不是不行），必须是<strong>直屏可旋转</strong>，建议是<strong>120hz</strong>（及以上）。我用的是aoc agon 爱攻3，一个直屏的显示器甚至可以用来很舒服的码代码。这些都解决了之后，一个合适高度的桌子也是不可或缺的。如果你无法调整你的桌子高度，调整你的椅子高度或者手台+显示器高度也是可选项。手台高而你很低的时候，有些键位要求是非常难以发力的。具体如何测定“合适”呢？你需要能比较舒适的做出这个手势：<del>pero下我们XP的玉手</del><br><img src="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/%E6%89%8B1.jpg" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/%E6%89%8B1.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></p>
+<blockquote>
+<p>食指和无名指正常是放在c和d的位置，大拇指l，小指r。中指可以闲置，也可以立起来表达你对sb谱的不满。  </p>
+</blockquote>
+<blockquote>
+<p>sdvx键位简称：蓝色start；白键从左到右叫abcd；下面的黄键叫l，r </p>
+</blockquote>
+<hr>
+<p>sdvx难度从1到20。如果要对比arc的话（没人没玩过arc吧！），我会把17比作10，18为10+，19为11，20为12。我觉得这个难度对比基本还是比较合理的，或者你愿意把17当成9也行，不过要能打17才算是有了一定水准的玩家。大概相当于mai能打13？这个时候你可以比较好的体验到sdvx的爽快感，疾走感，能见到绝大多数的配置。而这个绝大多数配置中非常基础的一条就是单手bc和单手lr。你经常需要快速的用某一只手来打中间，甚至是单手交互，而一个不合适的高度会很限制你的发挥。</p>
+<h3 id="2、HDD"><a href="#2、HDD" class="headerlink" title="2、HDD"></a>2、HDD</h3><p>首先你需要搞一个hdd。（什么是hdd？就是<del>盒大东</del>sdvx在你电脑里。如何安装hdd另行参考）<br>然后管理员运行asphyxia-core-x64.exe，这是什么我也不知道让你的sdvx连上只有你自己的网络。然后管理员运行spice64.exe。  </p>
+<p><img src="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/hdd1.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/hdd1.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><br>然后嗯一下f4（不是altf4），在buttons里绑定你的手台的按键，在analogs里绑定旋钮，并选择一个合适的灵敏度。怎样才叫合适：首先不能太慢，必须轻轻蹭一下你的旋钮，进度条也有比较明显的反应；同时不能太快，当你用一个不是很大的力度在拧旋钮时，如果你的进度条动的飞快，直接绕其一周，可能会被结算为没有反应。这是要注意的，曾经我因为这一点误以为旋钮坏了。（）我一般会把灵敏度在1.3到1.7内精细调整。<br>设置好后，再用f4取消这个菜单（也可以用鼠标叉掉）（为什么这都要写啊）<br>之后，按+号进行刷卡。用小键盘输入你的密码并确认之。然后输入你的名字：用旋钮调整字母并确认，然后再旋钮到end的位置确认来完成你的名字。这里没有配图因为我懒的配<br>遇到奇怪的界面就嗯start。 </p>
+<img  src="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/hdd41.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/hdd41.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" height="250" align="left" /> 
+<img  src="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/hdd22.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/hdd22.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" height="250" />  
+
+<p>然后你应该会来到这里（左图）。从这里用旋钮选择你想要游玩的游戏模式。 </p>
+<hr>
+<ul>
+<li>NORMAL：正常游戏模式 3首曲子。</li>
+<li>FRIEND：联机对战。想要用hdd联机对战你需要一些方法，比如询问@gyb</li>
+<li>MEGAMIX BATTLE：比较高级友人对战。1v1，每人选择5首歌，游戏会将选择的乐曲以dj mix的形式，裁成歌曲片段地给玩家游玩。对决时需要搭配副屏打开技能以增加点数。点数多者nb</li>
+<li>ARENA BATTLE：友人对战，最多4人同时游玩，一人一首歌比分数总和和累计星数也就是名次（这里与FRIEND不同）每首歌的第一名得两星；第二名一星；三四名cai。</li>
+<li>BLASTER：正版游戏受害者跑图的</li>
+<li>SKILL ANALYZER：考段。 <font color=grey>段位介绍以及教程会在之后添加</font></li>
+<li>PREMIUM TIME：既然你是hdd，直接出门左转来到这里就好了。练习时间！最自由的模式。选这个！</li>
+</ul>
+<p>然后你会来到右图：</p>
+<ul>
+<li>CREW：选择你的搭档。搭档除了色色和打胶没有什么其他用。</li>
+<li>APPEAL CARD：换头像。同上</li>
+<li>GAME START：应该不用说吧</li>
+</ul>
+<h3 id="3、选歌"><a href="#3、选歌" class="headerlink" title="3、选歌"></a>3、选歌</h3><p>这个菜单是一个文件夹。使用右旋钮来上下切换；使用start键进行确认；使用L来返回上一级；使用R来打开排序菜单，在这里你可以选择一个文件夹内的歌曲是如何排列的。它不会影响到文件夹内的排列。多个不同的“文件夹”也不是严格意义上的文件夹，一首歌可以被包含在多个文件夹中，它只是一种方式。图中你就能见到所有歌曲的文件夹以及按曲名分类的文件夹（X行）。<br>稍微提及几种分类来方便你搜索想要的歌曲：  </p>
+<p>
+<img  src="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/hdd5.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/hdd5.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" height="290"  align="left" /> 
+<img  src="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/hdd6.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/hdd6.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" height="245" />  
+</p>
+<br>
+
+<center><font color=grey><br>评分（左）完成度（右）。</font></center></br>    
+
+<hr>
+<p>这里会详细展开一下，谈一下不同的分数和完成度意味着什么。<br>左：<strong>按评分分类</strong>。评分就是指你一首歌达到的分数。</p>
+<ul>
+<li>100为？：我没见过，多才多艺的群友麻烦补充一下</li>
+<li>9900000+为S（后续只取前2位）：可以理解为对一首歌已经达到了极高的完成度。你可以看到我这只有俩，S的难度还是非常之高的。如果不是ranjer，其实个人认为没有什么继续推分的必要了。sdvx不是p歌游戏，判定还是比较严格的，虽然你要当p歌游戏玩我也管不着，但是在你的实力没达到顶尖水平时，去多越几个级要比推一首已经99了的歌对实力的提升有用114514倍。</li>
+<li>98+为AAA+：俗称鸟+。打的非常好！对一首歌的掌握是比较完美的。</li>
+<li>97+为AAA：鸟。打的很不错！基本能掌握这首歌的难点，并且判定也是比较高的一个状态。</li>
+<li>95+为AA+：基本上能够驾驭这首歌，整首歌对你来讲只有一两个难点。可能是这首歌的判定你抓不太好，也可能bpm较高物量较大你的体力跟不上，也可能是你会在某个难点损失比较多的分数。你可以认为你能熟练应对这首歌的大部分配置。如果你打某一个难度的歌平均大概在这个分数段，你可以认为你当前正处于打这个难度的水平。</li>
+<li>93+为AA：这首歌对你来说并没有太难，但你绝对不算打的很好。你在打这首歌的某些地方会感到比较吃力。</li>
+<li>90+为A：这首歌对你来说很难。你打这首歌是在越级。（当然可能是这首歌本身在它所在的难度里处于佼佼者）这种情况并不是说你绝对不应该再继续打这首歌了，你可以研究这首歌的难点尝试推分，当然如果久推不上就算了，这说明你在某些方面确实存在欠缺，最好进行一个练习而不要手癖。</li>
+<li>A都没有：嗯越是吧</li>
+</ul>
+<hr>
+<p>右：<strong>按完成度分类</strong>。完成度与分数相似但不同，它指的是你是否活着通过一首歌。尽管此类指标在移动端和sega系中形同虚设，但在b系音游中它也可以作为一个很重要的参考因素，有时甚至可以比分数更加准确。（因为判定的问题，打的同样好的歌，旋钮歌总是要比键盘歌分数高一些）<br>这里可以从下往上：</p>
+<ul>
+<li>PLAYED：打过。但是你只是打过，你没过。（不绝对代表着你过不了，因为很提前的中途退出，或者一首你在考段中打过却没在其他模式中打过的歌都会给出这样的评级）</li>
+<li>COMPLETE：过了。你通过了这首歌的普通难度。代表着你打这首歌没有在嗯越。</li>
+<li>EXCESSIVE COMPLETE：hard模式下通过。可以称为HC或者点灯。仅个人（也是很多人）看法：如果你能比较稳定的HC，这代表你会了这首歌。这首歌的大部分地方难不倒你，尽管可能它的某个小段对你来说仍然尤为困难，但是对你的影响也是有限的。HC大多数情况都在95及以上，少数判定很难抓的时候或许会93+或更低，但是这首歌如果出现在考段中，你已经基本能对它做出合格的应对。如果一个难度你能把绝大多数的歌都轻松打到HC，就可以考虑进入下个难度了。相反，如果这个难度你基本上都在95+或更高，但你在hard模式下很少或很难过，那你也不应该进入下一个难度，因为大部分配置你仍然不能很好的应对。<br><em>另：不用太严格执行这个规则，相信你会有自己的判断的。</em></li>
+<li>UC：全连。这没什么好说的。<br>然后这里应该还有一个完成度，但是我没得过，就不写了。</li>
+</ul>
+<h3 id="4、副屏"><a href="#4、副屏" class="headerlink" title="4、副屏"></a>4、副屏</h3><p><del>伴随着sdvx6的横空出世，女武神框带着劲爆的外观，光滑的触屏，继续玩家愉悦的体验啊。</del> 如何在hdd中较为舒适地使用<strong>副屏</strong>的查找乐曲、设置、exceed技能的功能呢，可以使用以下方案:    </p>
+<ol>
+<li>买触摸屏 100以内  没买过不好说  </li>
+<li>ipad连 群文件有教程， 不过不稳定   </li>
+<li>让我们请出真神——红辣椒！！！！！</li>
+</ol>
+<p>打开你的小辣椒，选到overlay界面<br><img src="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/%E5%89%AF%E5%B1%8F1.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/%E5%89%AF%E5%B1%8F1.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><br><em>底色红的是辣椒的新版本，没有的群里呼一声，以下教程以该版本为例</em><br><img src="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/%E5%89%AF%E5%B1%8F2.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/%E5%89%AF%E5%B1%8F2.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><br>然后在这一栏 按下bind 再按一下你先呼出内屏的键 就绑定完成了。游戏中你就可以用鼠标操作内屏释放忍术了。</p>
+<h2 id="三、如何打歌"><a href="#三、如何打歌" class="headerlink" title="三、如何打歌"></a>三、如何打歌</h2><p>对于SDVX来讲，在玩法上与其他音游不同最大的区别是旋钮。</p>
+<h3 id="基础篇——旋钮"><a href="#基础篇——旋钮" class="headerlink" title="基础篇——旋钮"></a>基础篇——旋钮</h3><h4 id="1-SDVX中的旋钮，到底是如何判定的？"><a href="#1-SDVX中的旋钮，到底是如何判定的？" class="headerlink" title="1.SDVX中的旋钮，到底是如何判定的？"></a>1.SDVX中的旋钮，到底是如何判定的？</h4><p>理解sdvx旋钮的工作原理，是理解任何问题的第一步。在游玩的过程中，你会见到蓝红两条轨道（根据设置颜色可变），正如arcaea中的蓝红两条蛇一样（这也是arc刚出时被人戏称为移动端sdvx的原因）。当一条轨道变化时，你需要扭动旋钮来使<strong>接收器的位置</strong>与<strong>谱面中轨道的位置</strong>相对应，蓝色轨道对应左旋钮，而红色轨道对应右旋钮。顺时针转动旋钮会使接收器向右方移动，逆时针则相反。  </p>
+<p>在arcaea中，玩家需要移动手指的落点，将其与蛇的下落位置几乎分毫不差地对应。那么在sdvx中，难道也需要玩家将接收器与轨道对应的位置分毫不差地对应吗？在现在的sdvx的版本中，答案是否定的，这样的判定方式过于苛刻，在一个节奏游戏中注意旋钮所停留的位置无疑是一件非常枯燥无聊的事情。于是，sdvx对于旋钮存在一种补正机制：</p>
+<blockquote>
+<ol>
+<li>只要你转动的方向正确，系统会自动帮你调节旋钮的移动速度和尺度。</li>
+<li>在旋钮无输入（你不旋转）它并且前方有非直角缓慢移动的轨道时，旋钮会跟随轨道的方向移动微小的距离；</li>
+<li>现版本当旋钮呈直线向前状态时，多余的转动也不会使其改变位置。</li>
+</ol>
+</blockquote>
+<p>如何理解<u>扭动旋钮来使接收器的位置与谱面中轨道的位置相对应</u>这句话？因为sdvx是在调整旋钮的方向，并且其具有补正机制，就会导致一个<strong>延后特性</strong>。新手在移动旋钮时，经常会发现对于一段中间转折方向的旋钮，一旦对于转折点的时机抓的不好，就会导致后半条旋钮全漏。<u>这是由于过早地判断了转折点</u>。比如对于一个先向右再向左的轨道，当轨道还在向右移动时，你却误判了转折点的时机提前向左移动，由于你的方向与轨道移动的方向是错误的，补正机制就也不会触发，你的旋钮就会遵循原速向左飞出去，与轨道脱离；那么接下来当轨道向左移动时，由于输入者还在向左移动旋钮，而旋钮已经在轨道的左边了，接下来它只会越来越往左，这自然就导致了后半条旋钮全漏。这时你需要对自己犯下的错误进行补救，也就是向相反的方向（对于本文的情景就是右边）扭一下。这个行为是反直觉的，破坏了你大脑的处理栈的，在稍微入门后才能考虑的，因为此时明明轨道在向左移动，你却要向右移动一下来为之前的错误进行补救。我对于新手的建议是，<strong>在旋钮改变方向时，比旋钮稍稍往后一点</strong>。稍微的提前会导致旋钮飞出去，但过分的延后却并不会：假如当轨道在向左移动时你还在向右转，旋钮确实会在一开始与轨道分离，但因为旋钮在轨道的右边，根据上文提到的补正机制，当你开始向左移动时马上就会切合起来。这个技巧即使是在难度极高的谱面也是有用的。  </p>
+<p>在高难度的谱面中，旋钮是非常容易失血的。对于具有一定难度的歌曲，刚能HC时，通关后的分数大概在 950w 上下是比较正常的，但对于旋钮歌来讲可能就是 975w 左右，这说明对于旋钮歌更容易失血（你需要打的更准确一点才能完成HC）。在12难度左右就很可能见到放置旋钮的谱面：先移动旋钮，然后需要放手打键，这时旋钮后面依然有直的轨道，你不需要动它，但此时会计分。如果你移动旋钮时失误了，导致失配，接下来旋钮没能切合到轨道上，你却需要移开手打键，一旦遇到这种情况就会大规模失血。而在17以上，这种情况会非常频繁的发生，因此一旦旋钮失配，你可能就需要重开了。  </p>
+<p>另外，sdvx的旋钮与hold一样，<strong>极其短暂的失配不会断连</strong>。结合以上信息，在此给大家介绍一下<strong>梁山手法</strong> <em>（为什么会起成这个名字热心的小伙伴可以补充一下，我8几道）</em>：就是快速的抖动你的旋钮，使其飞速的左右颤动。因为短暂失配不会断连，sdvx又有补正机制保证你在方向正确时能将其瞬间切合，因此理论上讲只要震动的速度极快，任何旋钮都难不倒你啦。当然，新手不要学这种手法。除非在过段时稍微用一用无伤大雅。当然，如果你愿意练我也管不着，但是对绝大多数歌曲来讲一直震动你的身体远比好好扭旋钮累的多。<br>同时我们也可以get一个技巧：如果旋钮掉了，就连续左右快速晃一下，大概率会接上（这也是一种小小的梁）。   </p>
+<p>综上所述，不管旋钮的弯曲程度如何，你只需要注意它的方向，保持方向正确即可（对于弧形的弯曲时机，有时可能从视野上难以进行分辨，但你只需要结合歌曲进行判断，它总会在一个明显的4分处进行转变）。同理对于横向的直角型旋钮，也不需要大力的进行扭动，你只需要进行最小最有必要的输入即可，而这不仅节省你的体力，又使你能更快地进行打键和旋钮间的切换（这非常必要）。</p>
+<h4 id="2-旋钮的灵活度？"><a href="#2-旋钮的灵活度？" class="headerlink" title="2.旋钮的灵活度？"></a>2.旋钮的灵活度？</h4><p>这是一个大部分新人购买了新的二手手台后都会考虑的一个问题。首先，旋钮必须<strong>足够润滑，足够灵活</strong>。参考前一个问题，你就能理解这样做的必要性。在这里我用润滑是指旋钮在扭动的过程中不应该存在明显的阻力，阻力越小你就能越轻松地扭动旋钮或切换旋转方向。但太过润滑导致其空转也是不可行的（不用解释吧），一般旋钮在高速扭动后不超过半圈会自由停下即可。我的旋钮设置的格外润滑，大力扭动后还会再转几圈，这方面按个人习惯因人而异也无所谓。而灵活是指在hdd的设定界面，当旋钮微量转动时，输入会有明显的反应。  </p>
+<p>但把输入调节的太过灵敏也不好。你可以想象旋钮的计量条是一个1到100的数值，当你移动旋钮时，它会正确的判断增加还是减少；但如果变化超过了一个阈值，比如数值飞速的增加，从50急速增加75变成25，此时系统反而会将其判断为减少。（XP：这种情况我曾经遇到过，此时轻微地扭动旋钮能触发，但大力地移动反而会掉，我也不知道为什么会介个样子的，把比例调低就好了）  </p>
+<h2 id="四、推荐乐曲"><a href="#四、推荐乐曲" class="headerlink" title="四、推荐乐曲"></a>四、推荐乐曲</h2><blockquote>
+<p>推荐乐曲的目的是便于大家参考练习，带有一定局限性。当然，游戏的曲库显然不止于此，游戏玩多了也达到了练习的目的。请大家酌情参考，玩一玩发发成绩图当然更好w。  </p>
+</blockquote>
+<h3 id="16"><a href="#16" class="headerlink" title="16"></a>16</h3><table>
+    <tr>
+        <td rowspan="6"><img src="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/16.1.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/16.1.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+      </td>
+        <td>曲名：
+Innocent Azure
+</td>
+    </tr>
+    <tr>
+        <td>曲师：
+kuro
+</td>
+    </tr>
+    <tr>
+        <td>Tier：
+无</td>
+    </tr>
+    <tr>
+        <td>难度评分：
+1</td>
+    </tr>
+    <tr>
+        <td>曲目评分：
+4</td>
+    </tr>
+    <tr>
+        <td>谱面评分：
+4
+</td>
+    </tr>
+    <tr>
+        <td colspan="2">推荐理由：
+传奇白丝泡水之全难度逆诈称，配上kuro的非常好听歌曲。谱面配置比较综合，什么都来了，但都来的不多，能打好这个谱面，就可以开始尝试攻克各种16级了。
+</td>
+        </tr>
+</table>
+<br>
+<table>
+    <tr>
+        <td rowspan="6"><img src="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/16.2.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/16.2.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+      </td>
+        <td>曲名：
+SHARK ATTACK
+</td>
+    </tr>
+    <tr>
+        <td>曲师：
+rhyki
+</td>
+    </tr>
+    <tr>
+        <td>Tier：
+无</td>
+    </tr>
+    <tr>
+        <td>难度评分：
+2</td>
+    </tr>
+    <tr>
+        <td>曲目评分：
+3</td>
+    </tr>
+    <tr>
+        <td>谱面评分：
+4
+</td>
+    </tr>
+    <tr>
+        <td colspan="2">推荐理由：
+非常好旋钮，让我喜提PUC - 1error。全曲只有85个单点，没有任何一点的键盘难度，适合上手爽拧水龙头。（正太泡水（不对好像不是正太））
+</td>
+        </tr>
+</table>
+<br>
+<table>
+    <tr>
+        <td rowspan="6"><img src="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/16.3.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/16.3.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+      </td>
+        <td>曲名：
+ラストリゾート
+
+</td>
+    </tr>
+    <tr>
+        <td>曲师：
+Ayase
+</td>
+    </tr>
+    <tr>
+        <td>Tier：
+无</td>
+    </tr>
+    <tr>
+        <td>难度评分：
+3</td>
+    </tr>
+    <tr>
+        <td>曲目评分：
+5</td>
+    </tr>
+    <tr>
+        <td>谱面评分：
+4
+</td>
+    </tr>
+    <tr>
+        <td colspan="2">推荐理由：
+跳拍节奏的键盘可以用来训练准度，总体上各方面就是一般16的难度，选进来一方面歌很温柔很好听，但主要是体验一下结尾轨道转圈（什么）
+</td>
+        </tr>
+</table>
+<br>
+<table>
+    <tr>
+        <td rowspan="6"><img src="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/16.4.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/16.4.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+      </td>
+        <td>曲名：
+Blossom
+
+</td>
+    </tr>
+    <tr>
+        <td>曲师：
+Synthion
+</td>
+    </tr>
+    <tr>
+        <td>Tier：
+无</td>
+    </tr>
+    <tr>
+        <td>难度评分：
+3</td>
+    </tr>
+    <tr>
+        <td>曲目评分：
+5</td>
+    </tr>
+    <tr>
+        <td>谱面评分：
+4
+</td>
+    </tr>
+    <tr>
+        <td colspan="2">推荐理由：
+很好听的电音，很飘逸的旋钮
+</td>
+        </tr>
+</table>
+<br>
+<table>
+    <tr>
+        <td rowspan="6"><img src="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/16.5.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/16.5.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+      </td>
+        <td>曲名：
+すきなことだけでいいです
+</td>
+    </tr>
+    <tr>
+        <td>曲师：
+ピノキオP
+
+</td>
+    </tr>
+    <tr>
+        <td>Tier：
+无</td>
+    </tr>
+    <tr>
+        <td>难度评分：
+4</td>
+    </tr>
+    <tr>
+        <td>曲目评分：
+3</td>
+    </tr>
+    <tr>
+        <td>谱面评分：
+3
+</td>
+    </tr>
+    <tr>
+        <td colspan="2">推荐理由：
+比较有难度的片手+出张特训。有频繁出现的出张配置，以及单手黄白交互，一开始打大概会觉得很难，但是可以作为一个挑战目标慢慢尝试！
+</td>
+        </tr>
+</table>
+<br>
+
+<h3 id="17"><a href="#17" class="headerlink" title="17"></a>17</h3><h4 id="初步"><a href="#初步" class="headerlink" title="初步"></a>初步</h4><p>16到17是比较大的跨度，你需要有一定的片手力，出张映射才能在17里框框打，不过在此之前，你可以游玩如下入门曲 <del>氵歌</del> !，感受像16的17是什么样的地力要求    <font color=grey> 难度递增 </font>  </p>
+<p>|<img src="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/jk_1260_1_b.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/jk_1260_1_b.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="> | <img src="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/jk_1659_1_b.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/jk_1659_1_b.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">|<img src="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/jk_1908_1_b.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/jk_1908_1_b.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">|<img src="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/jk_2062_1_b.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/jk_2062_1_b.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">|<br>—-|—|—|—|—|<br>|Chrono Diver -PENDULUMs- |Chronomia|[ ]dentity|QQ|<br><br></p>
+<p>|<img src="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/jk_1498_1_b.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/jk_1498_1_b.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="> | <img src="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/jk_1910_1_b.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/jk_1910_1_b.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">|<img src="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/jk_1316_1_b.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/jk_1316_1_b.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><br>—-|—|—|—|<br>|θコトノハθカプセルθ |VOLAQUAS|Elemental Creation|</p>
+<p>以上将970-975w作为目标即可，因为它们跟多数中位上位mxm的17没什么关系。作为初步的地力练习是好的选择，到了以后水平提升也可以用来吃分（。</p>
+<p>不过cola认为第二个表格的乐曲只要摸得差不多就可以游玩多数下位17了，如下推荐： </p>
+<table>
+    <tr>
+        <td rowspan="6"><img src="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/jk_1834_1_b.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/jk_1834_1_b.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+      </td>
+        <td>曲名：
+メンタンピンドラドラ
+</td>
+    </tr>
+    <tr>
+        <td>曲师：
+enzo + O2i3
+
+</td>
+    </tr>
+    <tr>
+        <td>Tier：
+10</td>
+    </tr>
+    <tr>
+        <td>难度评分：
+1
+      </td>
+    </tr>
+    <tr>
+        <td>曲目评分：
+3</td>
+    </tr>
+    <tr>
+        <td>谱面评分：
+4
+</td>
+    </tr>
+    <tr>
+        <td colspan="2">推荐理由：
+17超级大水曲，给每个来到17的新人以一点自信吧！主要难度是8分纵连要打准。
+
+
+</td>
+        </tr>
+</table>
+<br>
+<table>
+    <tr>
+        <td rowspan="6"><img src="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/jk_1867_1_b.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/jk_1867_1_b.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+      </td>
+        <td>曲名：
+-神っぽいな
+</td>
+    </tr>
+    <tr>
+        <td>曲师：
+ピノキオP
+
+</td>
+    </tr>
+    <tr>
+        <td>Tier：
+9</td>
+    </tr>
+    <tr>
+        <td>难度评分：
+1
+      </td>
+    </tr>
+    <tr>
+        <td>曲目评分：
+3</td>
+    </tr>
+    <tr>
+        <td>谱面评分：
+4
+</td>
+    </tr>
+    <tr>
+        <td colspan="2">推荐理由：
+非常好曲目！非常好谱面！不可不打！
+配置多样，会了就好抓准度，属于上手17时很难，习惯17时很简单，非常适合用来熟悉17的感觉。中间有一处反手旋钮需要背，但只有一下。大量fx发生。
+
+</td>
+        </tr>
+</table>
+<br>
+<table>
+    <tr>
+        <td rowspan="6"><img src="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/jk_1015_1_b.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/jk_1015_1_b.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+      </td>
+        <td>曲名：
+Smoked Turkey Rag
+</td>
+    </tr>
+    <tr>
+        <td>曲师：
+a_hisa
+
+</td>
+    </tr>
+    <tr>
+        <td>Tier：
+9</td>
+    </tr>
+    <tr>
+        <td>难度评分：
+2</td>
+    </tr>
+    <tr>
+        <td>曲目评分：
+略</td>
+    </tr>
+    <tr>
+        <td>谱面评分：
+略
+</td>
+    </tr>
+    <tr>
+        <td colspan="2">推荐理由：
+非常欢快的一首小曲，适合新手练习地板。也是没有什么难点，后半段稍有片手，旋钮基本无压力，难度主要在键盘。由于bpm不高，键盘没有太大的底力要求，但也不太好打准度。
+
+
+</td>
+        </tr>
+</table>
+<br>
+
+<table>
+    <tr>
+        <td rowspan="6"><img src="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/jk_2029_1_b.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/jk_2029_1_b.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+      </td>
+        <td>曲名：
+WWW
+</td>
+    </tr>
+    <tr>
+        <td>艺术家：
+ HIMEHINA
+
+</td>
+    </tr>
+    <tr>
+        <td>Tier：
+10</td>
+    </tr>
+    <tr>
+        <td>难度评分：
+0.5(xp说的)</td>
+    </tr>
+    <tr>
+        <td>曲目评分：
+5 好听！</td>
+    </tr>
+    <tr>
+        <td>谱面评分：
+4吧
+</td>
+    </tr>
+    <tr>
+        <td colspan="2">推荐理由：
+也是新人福利曲 爽打！himehina曲子的一贯风格相同，包含<b>大量的片手</b>与超长旋钮，但是本首歌中这一点不太难，除此以外没有其他任何难点。
+
+
+
+</td>
+        </tr>
+</table>
+<br>
+
+<p>然后打完你可能会 “屮黄加白看不懂”， “手张大放中间好唐”， “9成新sdvx手台低价出”  </p>
+<p>别急，这是正常的，因为绝大数16六位图里的one hand、hand trip都非常可爱，但是到了17就开始起飞。所以该多练了！ </p>
+<hr>
+<h4 id="黄加白散打推荐"><a href="#黄加白散打推荐" class="headerlink" title="黄加白散打推荐"></a>黄加白散打推荐</h4><table>
+    <tr>
+        <td rowspan="7"><img src="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/jk_1915_1_b.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/jk_1915_1_b.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+      </td>
+        <td>曲名：透明声彩</td>
+    </tr>
+    <tr>
+        <td>艺术家：YuNi</td>
+    </tr>
+    <tr>
+        <td>Tier：8</td>
+    </tr>
+    <tr>
+        <td>主观难度：1</td>
+    </tr>
+    <tr>
+        <td>曲目评分：4.5 好听！</td>
+    </tr>
+    <tr>
+        <td>谱面评分：4吧</td>
+    </tr>
+    <tr>
+      <td>适合学习：5
+    <tr>
+        <td colspan="2">推荐理由：
+有许多黄白小跨度跳拍以及12指14指慢交互适合初步开发片手，好听pop乐曲，容错较低
+</td>
+        </tr>
+</table>
+<br>
+
+<table>
+    <tr>
+        <td rowspan="7"><img src="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/jk_1533_1_b.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/jk_1533_1_b.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+      </td>
+        <td>曲名：SHION -sublimation mix-</td>
+    </tr>
+    <tr>
+        <td>艺术家：BlackY feat. Risa Yuzuki</td>
+    </tr>
+    <tr>
+        <td>Tier：8</td>
+    </tr>
+    <tr>
+        <td>主观难度：1.8</td>
+    </tr>
+    <tr>
+        <td>曲目评分：4.5 </td>
+    </tr>
+    <tr>
+        <td>谱面评分：5</td>
+    </tr>
+    <tr>
+      <td>适合学习：5
+    <tr>
+        <td colspan="2">推荐理由：
+黑Y梨纱经典组合,神的remix，出现了比较帅的6k楼梯，有一些旋钮和复合fx配置很适合练习
+</td>
+        </tr>
+</table>
+<br>
+  
+  <table>
+    <tr>
+        <td rowspan="7"><img src="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/jk_1649_1_b.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/jk_1649_1_b.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+      </td>
+        <td>曲名：キラメキ居残り大戦争</td>
+    </tr>
+    <tr>
+        <td>艺术家：森羅万象</td>
+    </tr>
+    <tr>
+        <td>Tier：7</td>
+    </tr>
+    <tr>
+        <td>主观难度：2</td>
+    </tr>
+    <tr>
+        <td>曲目评分：4.5 </td>
+    </tr>
+    <tr>
+        <td>谱面评分：4.5</td>
+    </tr>
+    <tr>
+      <td>适合学习：5
+    <tr>
+        <td colspan="2">推荐理由：
+非常好森罗万象，必须品鉴她们的乐曲。出张不多，形状奇妙的旋钮很好玩。掺fx的双押会拍了离刚力罗更进一步！
+</td>
+        </tr>
+</table>
+<br>
+    
+<table>
+    <tr>
+        <td rowspan="7"><img src="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/jk_1133_2_b.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/jk_1133_2_b.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+      </td>
+        <td>曲名：Enjoy This Time</td>
+    </tr>
+    <tr>
+        <td>艺术家：DJ Noriken feat.yukacco</td>
+    </tr>
+    <tr>
+        <td>Tier：8</td>
+    </tr>
+    <tr>
+        <td>主观难度：2</td>
+    </tr>
+    <tr>
+        <td>曲目评分：4.5 </td>
+    </tr>
+    <tr>
+        <td>谱面评分：4.5</td>
+    </tr>
+    <tr>
+      <td>适合学习：5
+    <tr>
+        <td colspan="2">推荐理由：
+圆神启动！多押拍易脑梗。适中的bpm下，配合音乐打打打很爽，也适合练习。
+</td>
+        </tr>
+</table>
+<br>
+
+<table>
+    <tr>
+        <td rowspan="7"><img src="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/jk_1476_1_b.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/jk_1476_1_b.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+      </td>
+        <td>曲名：AXION</td>
+    </tr>
+    <tr>
+        <td>艺术家：sakuzyo</td>
+    </tr>
+    <tr>
+        <td>Tier：7</td>
+    </tr>
+    <tr>
+        <td>主观难度：2.5</td>
+    </tr>
+    <tr>
+        <td>曲目评分：4.5 </td>
+    </tr>
+    <tr>
+        <td>谱面评分：4</td>
+    </tr>
+    <tr>
+      <td>适合学习：5
+    <tr>
+        <td colspan="2">推荐理由：
+削除小时候的名曲，也是魔骑士axion的最后一首。（你猜它为什么叫axion组）最难点便是解三角形，带fx的散打和楼梯，对入门17的玩家来说有很大读谱压力，可以适当调高流速。而对越级考段玩家可能手癖还没解，所以打准度也有难度。
+</td>
+        </tr>
+</table>
+<br>
+超纲推荐：  
+
+
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th><img src="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/jk_1736_3_b.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/jk_1736_3_b.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt=" "></th>
+<th><img src="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/jk_0835_1_b.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/jk_0835_1_b.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></th>
+<th><img src="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/jk_1273_3_b.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/jk_1273_3_b.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt=" "></th>
+<th><img src="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/jk_1895_3_b.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/jk_1895_3_b.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt=" "></th>
+<th><img src="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/jk_1612_3_b.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/jk_1612_3_b.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></th>
+<th><img src="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/jk_0633_1_b.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/jk_0633_1_b.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></th>
+<th><img src="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/jk_1906_1_b.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/jk_1906_1_b.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>曲目</td>
+<td>ディスコルディア</td>
+<td>Parousia</td>
+<td>Fly Like You</td>
+<td>すべてが幻になった後で</td>
+<td>卑弥呼</td>
+<td>2 minutes fighters</td>
+<td>perditus + paradisus</td>
+</tr>
+<tr>
+<td>主观难度</td>
+<td>3.2</td>
+<td>3.5</td>
+<td>3.5</td>
+<td>3.8</td>
+<td>3.8</td>
+<td>4</td>
+<td>4</td>
+</tr>
+<tr>
+<td><br></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<hr>
+<h4 id="出张练习推荐"><a href="#出张练习推荐" class="headerlink" title="出张练习推荐"></a>出张练习推荐</h4><p>  一只手处理旋钮，另一只手移动处理其他按键，在sdvx里是十分常见的配置，到了17，这样的配置也更加常见。我的做法是利用游戏在旋钮到来前的提示，或者是将注意力放在旋钮的颜色上（默认左手蓝右手红），把要处理旋钮的手就位后，再集中精力用剩的手处理接下来的键盘。</p>
+<blockquote>
+<p>在开始之前，建议大致游玩16级裤衩型谱面（六维图长得像裤衩的）。<br><img src="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/pants.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/pants.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="><br>这些歌基本上在16都是地雷，所以分数爆了可不必在意，但是这些物量低的出张能帮助你更好地适应、更舒适地游玩以下乐曲  </p>
+</blockquote>
+<table>
+    <tr>
+        <td rowspan="7"><img src="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/jk_1139_1_b.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/jk_1139_1_b.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+      </td>
+        <td>曲名：Decoy</td>
+    </tr>
+    <tr>
+        <td>艺术家：Yooh</td>
+    </tr>
+    <tr>
+        <td>Tier：10</td>
+    </tr>
+    <tr>
+        <td>主观难度：1</td>
+    </tr>
+    <tr>
+        <td>曲目评分：4 </td>
+    </tr>
+    <tr>
+        <td>谱面评分：4</td>
+    </tr>
+    <tr>
+      <td>适合学习：5
+    <tr>
+        <td colspan="2">推荐理由：
+该铺面包含多次单手LR单手直角旋钮的切换，配置难度层层递进，作为练习再合适不过。因为旋钮歌打分不难，所以建议此曲练习到978w以上。
+</td>
+        </tr>
+</table>
+<br>
+  
+<table>
+    <tr>
+        <td rowspan="7"><img src="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/jk_0546_2_b.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/jk_0546_2_b.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+      </td>
+        <td>曲名：AYAKASHI</td>
+    </tr>
+    <tr>
+        <td>艺术家：Hommarju</td>
+    </tr>
+    <tr>
+        <td>Tier：9</td>
+    </tr>
+    <tr>
+        <td>主观难度：2</td>
+    </tr>
+    <tr>
+        <td>曲目评分：4 </td>
+    </tr>
+    <tr>
+        <td>谱面评分：5</td>
+    </tr>
+    <tr>
+      <td>适合学习：5
+    <tr>
+        <td colspan="2">推荐理由：
+魔性的小曲，你跟着节奏扭动出张，非常有趣。不过切换手速度比前者快又出现了片手ac、bd双押。值得注意的是，中间有一段有出张旋钮（一只手拧另一侧的旋钮）。
+</td>
+        </tr>
+</table>
+<br>
+  
+<table>
+    <tr>
+        <td rowspan="7"><img src="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/jk_1371_1_b.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/jk_1371_1_b.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+      </td>
+        <td>曲名：Sacrifice Escape: 不条理の模倣による感情と代償</td>
+    </tr>
+    <tr>
+        <td>艺术家：memex</td>
+    </tr>
+    <tr>
+        <td>Tier：7</td>
+    </tr>
+    <tr>
+        <td>主观难度：2</td>
+    </tr>
+    <tr>
+        <td>曲目评分：4.5 </td>
+    </tr>
+    <tr>
+        <td>谱面评分：4.5</td>
+    </tr>
+    <tr>
+      <td>适合学习：5
+    <tr>
+        <td colspan="2">推荐理由：
+好听乐曲，小时候被弹幕点歌创了。。有单手BR，CL的双押，适合来练中盘片手（指一只手处理BCLR键）。
+</td>
+        </tr>
+</table>
+<br>
+
+  </table>
+<br>
+  
+<table>
+    <tr>
+        <td rowspan="7"><img src="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/jk_1966_1_b.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/jk_1966_1_b.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+      </td>
+        <td>曲名： Element of SPADA</td>
+    </tr>
+    <tr>
+        <td>艺术家：猫叉Master feat.霜月はるか</td>
+    </tr>
+    <tr>
+        <td>Tier：6</td>
+    </tr>
+    <tr>
+        <td>主观难度：2.5</td>
+    </tr>
+    <tr>
+        <td>曲目评分：5 </td>
+    </tr>
+    <tr>
+        <td>谱面评分：5+</td>
+    </tr>
+    <tr>
+      <td>适合学习：5
+    <tr>
+        <td colspan="2">推荐理由：神曲！赞美我们猫叉！！ 谱面也是神谱，片手和出张设计跟歌曲相当契合。需要注意的是一些出张旋钮。难度不局限于出张，是全方位的练习好谱。
+</td>
+        </tr>
+</table>
+<br>
+
+<hr>
+<h4 id="片手练习推荐"><a href="#片手练习推荐" class="headerlink" title="片手练习推荐"></a>片手练习推荐</h4><p>谈到出张便离不开片手，17跟16不同，单手旋风、交互和中盘以及3k的出现会更加频繁，于是我简单推荐一些这类特点鲜明的乐曲，供大家参考练习</p>
+  </table>
+<br>
+  
+<table>
+    <tr>
+        <td rowspan="7"><img src="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/jk_1183_3_b.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/jk_1183_3_b.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+      </td>
+        <td>曲名： 僕らの時間</td>
+    </tr>
+    <tr>
+        <td>艺术家：テヅカ feat. 大西あみみ</td>
+    </tr>
+    <tr>
+        <td>Tier：6</td>
+    </tr>
+    <tr>
+        <td>主观难度：2.5</td>
+    </tr>
+    <tr>
+        <td>曲目评分：4.5 </td>
+    </tr>
+    <tr>
+        <td>谱面评分：5</td>
+    </tr>
+    <tr>
+      <td>适合学习：5
+    <tr>
+        <td colspan="2">推荐理由：好听的乐曲当然会涉及跳拍，其中谱面更是包含大量片手跳拍，还有非常恐怖LR跳拍。能980这个的话，我认为其他正常17凹凹都能推分了。
+
+</td>
+        </tr>
+</table>
+<br>
+  
+<table>
+    <tr>
+        <td rowspan="7"><img src="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/jk_0966_1_b.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/jk_0966_1_b.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+      </td>
+        <td>曲名：水槽のクジラ</td>
+    </tr>
+    <tr>
+        <td>艺术家：テヅカ feat. 大西あみみ</td>
+    </tr>
+    <tr>
+        <td>Tier：9</td>
+    </tr>
+    <tr>
+        <td>主观难度：2.5</td>
+    </tr>
+    <tr>
+        <td>曲目评分：4.5 </td>
+    </tr>
+    <tr>
+        <td>谱面评分：4</td>
+    </tr>
+    <tr>
+      <td>适合学习：4.5
+    <tr>
+        <td colspan="2">推荐理由：Tier 9只是因为好s，对于刚打17的玩家来说片手3k和带LR的单手交互有一定难度。
+</td>
+        </tr>
+</table>
+<br>
+  
+<table>
+    <tr>
+        <td rowspan="7"><img src="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/jk_0324_1_b.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/jk_0324_1_b.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+      </td>
+        <td>曲名：Ture blue</td>
+    </tr>
+    <tr>
+        <td>艺术家：dj TAKA feat. AiMEE</td>
+    </tr>
+    <tr>
+        <td>Tier：5</td>
+    </tr>
+    <tr>
+        <td>主观难度：3.5</td>
+    </tr>
+    <tr>
+        <td>曲目评分：5+</td>
+    </tr>
+    <tr>
+        <td>谱面评分：4</td>
+    </tr>
+    <tr>
+      <td>适合学习：4.5
+    <tr>
+        <td colspan="2">推荐理由：ture muaic！不过可惜早期谱面的表现力有所欠缺，全篇的平A无法充分表现其感情的波动。练单手螺旋倒是不错的选择。
+</td>
+        </tr>
+</table>
+<br>
+<table>
+    <tr>
+        <td rowspan="7"><img src="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/jk_1694_1_b.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/jk_1694_1_b.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="/>
+      </td>
+        <td>曲名:2094</td>
+    </tr>
+    <tr>
+        <td>艺术家：Yuta Imai vs Blacklolita</td>
+    </tr>
+    <tr>
+        <td>Tier：3</td>
+    </tr>
+    <tr>
+        <td>主观难度：4</td>
+    </tr>
+    <tr>
+        <td>曲目评分：5 </td>
+    </tr>
+    <tr>
+        <td>谱面评分：4</td>
+    </tr>
+    <tr>
+      <td>适合学习：4.5
+    <tr>
+        <td colspan="2">推荐理由：两位hardcore大将带来的赛博国风，很酷的一首歌。直播被创过，因为片手交互暴多，单手三角很累，需要高的旋钮力和地力。
+</td>
+        </tr>
+</table>
+<br>
+
+<h2 id="不影响正常游玩的小知识："><a href="#不影响正常游玩的小知识：" class="headerlink" title="不影响正常游玩的小知识："></a>不影响正常游玩的小知识：</h2><h3 id="一、难度"><a href="#一、难度" class="headerlink" title="一、难度"></a>一、难度</h3><p>SDVX有三个常驻难度和一个特殊难度，常驻难度分别是NOV（蓝）、ADV（黄）、EXH（红），从二代开始会为曲子追加第四难度，不同代数的难度名分别是INF（虹 二代）GRV（重 三代）、HVN（天 四代）、VVD（？ 五代）、XCD（？ 六代）。从五代开始，新追加的全部都有四个常驻难度，而这个常驻难度名为MXM（白）。</p>
+<h3 id="二、如何获取音源和曲绘"><a href="#二、如何获取音源和曲绘" class="headerlink" title="二、如何获取音源和曲绘"></a>二、如何获取音源和曲绘</h3><p>在游玩SDVX一段时间后，你可能会有写自制谱或者写教程的冲动，这时你可能会需要原始音频和曲目封面。如果你已经有了hdd，那么恭喜你，在你放置hdd的路径&#x2F;contents&#x2F;data&#x2F;music下，就是全套音乐相关文件了！你可以进行简单的检索来找到你想要的歌所在的文件夹，如下所示：</p>
+<p><img src="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/%E5%9B%BE%E7%89%87%E5%9C%B0%E5%9D%80.png" class="lazyload" data-srcset="https://gcore.jsdelivr.net/gh/Cola-2-3/dsypic@main/img/%E5%9B%BE%E7%89%87%E5%9C%B0%E5%9D%80.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">  </p>
+<p>其中s3v文件就是音源文件，手动把后缀改成mp3或者什么其他的即可，要是觉得太暴力丢到格式工厂转一下也行；vox文件是谱面文件，不过没什么用，因为sdvx自制谱也不是这个格式；png文件就是所有难度的封面了，各取所需即可。<br>如果你没有hdd，只是单纯喜欢sdvx的歌曲！那也很简单，找个网易云电台就好了，比如这个：<a target="_blank" rel="noopener" href="https://music.163.com/djradio?id=985459570&userid=365084008">https://music.163.com/djradio?id=985459570&userid=365084008</a></p>
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>这篇由XPP编写的SDVX教程，在音游群里以可以自由编辑的腾讯文档的形式，目前还在被其他喜欢sdvx的玩家持续的输出内容。  </p>
+<p>我在大一刚入学的时候，刚接触舞萌。这款街机游戏其实对于移动端音游玩家入门来说，还是有一些门槛和需要开发大脑的游戏特色配置。我当时在MDZZ同好会，群里的尘埃落定大佬（他现在叫车乃了）在B站有一篇<a target="_blank" rel="noopener" href="https://www.bilibili.com/read/cv8509720/?from=search&spm_id_from=333.337.0.0">简明星星教程</a>。看了这个教程，其实最表层的收获是更会打歌了，也让我听到了一些好听的音乐。 </p>
+<p>有一天车乃亦未寝，我俩步于机械楼。他说他的教程其实一开始并没有得到什么外界的动力，因为音游嘛，本身就是很快得到正反馈的游戏类型，很多情况都是“ 问就多练 ”。但是因为他听到院长<font color=grey> 喜欢越级的老一辈wmc </font>说“想打ow（一首星星很复杂的大脑升级歌，玩家戏称高数）”,所以他有了写教程的动力。</p>
+<p>但其实现在舞萌铺货也越来越多，成为现象级的街机音游了，那篇教程给了很多刚入门的群友帮助，现在他们也都成为了舞萌大手。我觉得要是能写点像那样的教程，<strong>收获产出内容的正反馈</strong>，一定是非常幸福的。</p>
+<p>所以在获得XPP的教程编辑许可后，我负责了17的曲目推荐练习。因为17有点像舞萌的13、13+，也是需要升级大脑才能好提升的等级。刚好我卡的比较久，就小小写了一点。</p>
+<p>目前当视研的网站在慢慢成熟，而且2024年社团招新也即将到来。借着东风，我将这篇sdvx教程经过了一点删减和修改，小小的排版之后，分享到网站上供大家阅读。希望能让大家以更舒适的姿势游玩SDVX，更希望就是这篇文章<br>能激发各位在自己擅长的领域产出知识，分享到dsy网上，真的很爽很幸福。</p>
+<p>  感谢构建教程的框架并且提供绝大多数内容的WindowsXP，没有你我很可能也不会写那些内容，你爆的金币po到网上定会流芳百世；以及参与补充内容的斯诺格，你的表格拯救了我的排版。以后会有群友在文档里陆陆续续地添加内容，我也会及时同步网站。</p>
+  <p align = "right"><font color=grey> Cola233<br>24/9/20 </font></p align>
+
+
+
+
+
+  </div>
+  
+  
+    
+    <div class='footer'>
+       <!-- 参考资料、相关资料等 -->
+      
+       <!-- 相关文章 -->
+      
+      <!-- 版权声明组件 -->
+      
+      <!-- 打赏组件 -->
+      
+    </div>
+  
+  
+    
+
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-09-21T03:01:10+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：Sep 21, 2024</p>
+  </a>
+</div>
+
+        
+      
+        
+          
+  
+  <div class="new-meta-item meta-tags"><a class="tag" href="/tags/%E9%9F%B3%E6%B8%B8/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>音游</p></a></div> <div class="new-meta-item meta-tags"><a class="tag" href="/tags/SDVX/" rel="nofollow"><i class="fa-solid fa-hashtag fa-fw" aria-hidden="true"></i><p>SDVX</p></a></div>
+  <span hidden itemprop="keywords">音游 SDVX</span>
+
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://dsyacg.github.io/2024/09/20/sdvx%E7%AE%80%E6%98%93%E6%95%99%E7%A8%8B/&title=sdvx简易教程 - 当视研&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://dsyacg.github.io/2024/09/20/sdvx%E7%AE%80%E6%98%93%E6%95%99%E7%A8%8B/&title=sdvx简易教程 - 当视研&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://dsyacg.github.io/2024/09/20/sdvx%E7%AE%80%E6%98%93%E6%95%99%E7%A8%8B/&title=sdvx简易教程 - 当视研&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+    <!-- Custom Files bottomMeta begin -->
+    
+    <!-- Custom Files bottomMeta end -->
+  </div>
+
+
+  
+  
+
+  
+    <div class="prev-next">
+      
+        <a class='prev' href='/2024/09/20/Ave%20Mujica%E7%9A%84%E9%9D%A2%E5%85%B7%E8%B5%B7%E6%BA%90%E4%B8%8E%E5%8F%91%E5%B1%95%E8%80%83%E8%AF%81/'>
+          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>Ave Mujica的面具起源与发展考证</p>
+          <p class='content'>在刚完结的动画 《BanG Dream! It’s MyGO!!!!!》 的最终话中，出现了一支名为 “Ave Mujica” 的乐队，以华丽的演出和动画官方行动力极强的宣发，引爆了广大观众的舆...</p>
+        </a>
+      
+      
+        <a class='next' href='/2024/09/20/%E7%BB%98%E7%94%BB%E4%BD%9C%E5%93%81%E5%90%88%E9%9B%86A/'>
+          <p class='title'>绘画作品合集A<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>
+
+
+
+
+
+
+
+by 闪光要乐奈
+</p>
+        </a>
+      
+    </div>
+  
+  <!-- Custom Files postEnd begin-->
+  
+  <!-- Custom Files postEnd end-->
+</article>
+
+
+
+
+</div>
+<aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
+  
+
+  
+    
+    
+      
+    
+  
+
+
+<div class="widget-sticky pjax">
+
+  
+  
+
+
+  <section class="widget toc-wrapper desktop mobile " id="toc-div" >
+    
+  <header>
+    
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E4%B8%BA%E4%BB%80%E4%B9%88%E9%80%89%E6%8B%A9SDVX"><span class="toc-text">一、为什么选择SDVX</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E6%B8%B8%E7%8E%A9%E7%9A%84%E4%BA%8B%E5%85%88%E5%87%86%E5%A4%87"><span class="toc-text">二、游玩的事先准备</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1%E3%80%81%E6%89%8B%E5%8F%B0"><span class="toc-text">1、手台</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2%E3%80%81HDD"><span class="toc-text">2、HDD</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3%E3%80%81%E9%80%89%E6%AD%8C"><span class="toc-text">3、选歌</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4%E3%80%81%E5%89%AF%E5%B1%8F"><span class="toc-text">4、副屏</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E5%A6%82%E4%BD%95%E6%89%93%E6%AD%8C"><span class="toc-text">三、如何打歌</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E7%AF%87%E2%80%94%E2%80%94%E6%97%8B%E9%92%AE"><span class="toc-text">基础篇——旋钮</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-SDVX%E4%B8%AD%E7%9A%84%E6%97%8B%E9%92%AE%EF%BC%8C%E5%88%B0%E5%BA%95%E6%98%AF%E5%A6%82%E4%BD%95%E5%88%A4%E5%AE%9A%E7%9A%84%EF%BC%9F"><span class="toc-text">1.SDVX中的旋钮，到底是如何判定的？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E6%97%8B%E9%92%AE%E7%9A%84%E7%81%B5%E6%B4%BB%E5%BA%A6%EF%BC%9F"><span class="toc-text">2.旋钮的灵活度？</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E6%8E%A8%E8%8D%90%E4%B9%90%E6%9B%B2"><span class="toc-text">四、推荐乐曲</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#16"><span class="toc-text">16</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#17"><span class="toc-text">17</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%9D%E6%AD%A5"><span class="toc-text">初步</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%BB%84%E5%8A%A0%E7%99%BD%E6%95%A3%E6%89%93%E6%8E%A8%E8%8D%90"><span class="toc-text">黄加白散打推荐</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%87%BA%E5%BC%A0%E7%BB%83%E4%B9%A0%E6%8E%A8%E8%8D%90"><span class="toc-text">出张练习推荐</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%89%87%E6%89%8B%E7%BB%83%E4%B9%A0%E6%8E%A8%E8%8D%90"><span class="toc-text">片手练习推荐</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%8D%E5%BD%B1%E5%93%8D%E6%AD%A3%E5%B8%B8%E6%B8%B8%E7%8E%A9%E7%9A%84%E5%B0%8F%E7%9F%A5%E8%AF%86%EF%BC%9A"><span class="toc-text">不影响正常游玩的小知识：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E9%9A%BE%E5%BA%A6"><span class="toc-text">一、难度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E5%A6%82%E4%BD%95%E8%8E%B7%E5%8F%96%E9%9F%B3%E6%BA%90%E5%92%8C%E6%9B%B2%E7%BB%98"><span class="toc-text">二、如何获取音源和曲绘</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%8E%E8%AE%B0"><span class="toc-text">后记</span></a></li></ol>
+    </div>
+  </section>
+
+  
+
+</div>
+
+
+<!-- 没有 pjax 占位会报错 万恶的 pjax -->
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <!-- Custom Files side begin -->
+  
+  <!-- Custom Files side end -->
+</aside>
+
+
+
+          <!--此文件用来存放一些不方便取值的变量-->
+<!--思路大概是将值藏到重加载的区域内-->
+
+<pjax>
+<script>
+  window.pdata={}
+  pdata.ispage=true;
+  pdata.commentPath="";
+  pdata.commentPlaceholder="";
+  pdata.commentConfig={};
+  //  see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs
+  
+    // header
+    var l_header=document.getElementById("l_header");
+    
+    l_header.classList.remove("show");
+    
+    
+      // cover
+      var cover_wrapper=document.querySelector('#l_cover .cover-wrapper');
+      var scroll_down=document.getElementById('scroll-down');
+      cover_wrapper.id="half";
+      cover_wrapper.style.display="";
+      scroll_down.style.display="none";
+    
+  
+</script>
+</pjax>
+        </div>
+        
+  
+  <footer class="footer clearfix"  itemscope itemtype="http://schema.org/WPFooter">
+    <br><br>
+    
+      
+        <div class="aplayer-container">
+          
+
+  
+    <meting-js
+      theme='#1BCDFC'
+      autoplay='false'
+      volume='0.7'
+      loop='all'
+      order='list'
+      fixed='false'
+      list-max-height='320px'
+      server='netease'
+      type='song'
+      id='2122286004'
+      list-folded='true'>
+    </meting-js>
+  
+
+
+        </div>
+      
+    
+      
+        <br>
+        <div class="social-wrapper" itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          
+            
+              <a href="https://b23.tv/gJUq0xv"
+                class="social fas fa-rss flat-btn"
+                target="_blank"
+                rel="external nofollow noopener noreferrer" itemprop="url">
+                
+              </a>
+            
+          
+        </div>
+      
+    
+      
+        <div><p>Blog content follows the <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) License</a></p>
+</div>
+      
+    
+      
+        Use
+        <a href="https://github.com/volantis-x/hexo-theme-volantis/#5.8.0" target="_blank" class="codename">Volantis</a>
+        as theme
+      
+    
+      
+        <div class='copyright'>
+        <p><a href="/">Copyright © 2023-2024 HIT当代视觉文化研究会</a></p>
+
+        </div>
+      
+    
+    <!-- Custom Files footer begin-->
+    
+    <!-- Custom Files footer end-->
+  </footer>
+
+
+        <a id="s-top" class="fa-solid fa-arrow-up fa-fw" href="/" onclick="return false;" title="top"></a>
+      </div>
+    </div>
+    <div>
+      <script>
+  /******************** volantis.dom ********************************/
+  // 页面选择器 将dom对象缓存起来 see: /source/js/app.js etc.
+  volantis.dom.bodyAnchor = volantis.dom.$(document.getElementById("safearea")); // 页面主体
+  volantis.dom.topBtn = volantis.dom.$(document.getElementById('s-top')); // 向上
+  volantis.dom.wrapper = volantis.dom.$(document.getElementById('wrapper')); // 整个导航栏
+  volantis.dom.coverAnchor = volantis.dom.$(document.querySelector('#l_cover .cover-wrapper')); // 1个
+  volantis.dom.switcher = volantis.dom.$(document.querySelector('#l_header .switcher .s-search')); // 搜索按钮   移动端 1个
+  volantis.dom.header = volantis.dom.$(document.getElementById('l_header')); // 移动端导航栏
+  volantis.dom.search = volantis.dom.$(document.querySelector('#l_header .m_search')); // 搜索框 桌面端 移动端 1个
+  volantis.dom.mPhoneList = volantis.dom.$(document.querySelectorAll('#l_header .m-phone .list-v')); //  手机端 子菜单 多个
+</script>
+
+<script>
+  
+  volantis.css("https://unpkg.com/volantis-static@0.0.1654736714924/libs/@fortawesome/fontawesome-free/css/all.min.css");
+  
+  
+  
+</script>
+
+<!-- required -->
+
+
+<!-- internal -->
+
+<script src="/js/app.js"></script>
+
+
+
+
+
+
+<!-- rightmenu要在darkmode之前（ToggleButton） darkmode要在comments之前（volantis.dark.push）-->
+
+
+
+<script>
+  function loadIssuesJS() {
+    
+      const sites_api = document.getElementById('sites-api');
+      if (sites_api != undefined && typeof SitesJS === 'undefined') {
+        volantis.js("/js/plugins/tags/sites.js")
+      }
+    
+    
+      const friends_api = document.getElementById('friends-api');
+      if (friends_api != undefined && typeof FriendsJS === 'undefined') {
+        volantis.js("/js/plugins/tags/friends.js")
+      }
+    
+    
+      const contributors_api = document.getElementById('contributors-api');
+      if (contributors_api != undefined && typeof ContributorsJS === 'undefined') {
+        volantis.js("/js/plugins/tags/contributors.js")
+      }
+    
+  };
+  loadIssuesJS()
+  volantis.pjax.push(()=>{
+    loadIssuesJS();
+  })
+
+</script>
+
+
+
+
+  <script defer src="https://unpkg.com/volantis-static@0.0.1654736714924/libs/vanilla-lazyload/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazyload",
+    threshold: 0
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    lazyLoadInstance.update();
+  });
+  document.addEventListener('pjax:complete', function () {
+    lazyLoadInstance.update();
+  });
+</script>
+
+
+
+
+  
+
+<script>
+  window.FPConfig = {
+	delay: 0,
+	ignoreKeywords: ["#"],
+	maxRPS: 6,
+	hoverDelay: 0
+  };
+</script>
+<script defer src="https://unpkg.com/volantis-static@0.0.1654736714924/libs/flying-pages/flying-pages.min.js"></script>
+
+
+
+
+
+
+
+  <script>
+  volantis.css("https://unpkg.com/volantis-static@0.0.1654736714924/libs/aplayer/dist/APlayer.min.css");
+  (async () => {
+    // APlayer 需要在  MetingJS 之前加载
+    await volantis.js("https://unpkg.com/volantis-static@0.0.1654736714924/libs/aplayer/dist/APlayer.min.js")
+    await volantis.js("https://unpkg.com/volantis-static@0.0.1654736714924/libs/meting/dist/Meting.min.js")
+  
+  })();
+
+  function SetAPlayerPlugin(){
+    let Metings = document.querySelectorAll('meting-js');
+    if (Metings.length === 0) {return;};
+    if (Metings[0].aplayer && Metings[0].aplayer.on) {
+      // improve the accessibility https://web.dev/button-name/
+      document.querySelectorAll(".aplayer-icon-menu").forEach(e=>{
+        e.setAttribute("aria-label","Aplayer Menu")
+      })
+      // message see: /layout/_plugins/message/script.ejs
+      
+        try {
+          setTimeout(() => {
+            Metings.forEach((item, index) => {
+              const aplayerItem = item.aplayer; if(!aplayerItem) return;
+              const rightAplayerCheck = 'true' === 'true'
+                && item.meta.id === '2122286004';
+              if(rightAplayerCheck && typeof RightMenuAplayer !="undefined") RightMenuAplayer.checkAPlayer();
+              if(aplayerItem.events.events.play.every(item => {return item.name !== 'messagePlay'})) {
+                aplayerItem.on('play', function messagePlay() {
+                  let index = aplayerItem.list.index;
+                  let title = aplayerItem.list.audios[index].title;
+                  let artist = aplayerItem.list.audios[index].artist;
+                  setTimeout(() => {
+                    VolantisApp.message('音乐通知', title + ' - ' + artist, {
+                      icon: 'fa-solid fa-play',
+                      transitionIn: 'flipInX',
+                      transitionOut: 'flipOutX'
+                    });
+                  }, 100)
+                });
+              }
+              if(aplayerItem.events.events.pause.every(item => {return item.name !== 'messagePause'})) {
+                aplayerItem.on('pause', function messagePause() {
+                  let index = aplayerItem.list.index;
+                  let title = aplayerItem.list.audios[index].title;
+                  let artist = aplayerItem.list.audios[index].artist;
+                  setTimeout(() => {
+                    // 歌曲播放结束也会触发 pause 事件，为了避免错误提示，等待一会儿
+                    if(aplayerItem.paused) {
+                      VolantisApp.message('音乐通知', title + ' - ' + artist, {
+                        icon: 'fa-solid fa-pause',
+                        transitionIn: 'flipInX',
+                        transitionOut: 'flipOutX'
+                      });
+                    }
+                  }, 100)
+                });
+              }
+            });
+          }, 500)
+        } catch (error) { console.error(error); }
+      
+    }else{
+      volantis.requestAnimationFrame(SetAPlayerPlugin)
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", ()=>{
+    SetAPlayerPlugin();
+  });
+  volantis.pjax.push(SetAPlayerPlugin);
+</script>
+
+
+
+
+      <script>
+  volantis.layoutHelper("comments",`<div id="giscus_container"></div>`)
+
+  volantis.giscus = {};
+
+  function check_giscus() {
+    if (volantis.dark.mode === "dark") {
+      volantis.giscus.Theme = 'dark';
+    } else {
+      volantis.giscus.Theme = 'light';
+    }
+
+    return document.getElementById("giscus_container");
+  }
+
+  function pjax_giscus() {
+    const HEAD = check_giscus();
+    if (!HEAD) return;
+    let cfg = Object.assign({"theme":{"light":"light","dark":"dark"},"repo":"dsyacg/comments","repo-id":"R_kgDOMuHtJA","category":"Announcements","category-id":"DIC_kwDOMuHtJM4CiRih","mapping":"title","reactions-enabled":"1","emit-metadata":"0","lang":"zh-CN"},pdata.commentConfig)
+    const script = document.createElement('script');
+    script.setAttribute('src', 'https://giscus.app/client.js');
+    Object.keys(cfg).forEach(k=>{
+      if (k != "theme") {
+        script.setAttribute('data-'+k, cfg[k]);
+      }
+    })
+    script.setAttribute('data-theme', volantis.giscus.Theme);
+    script.setAttribute('crossorigin', "anonymous");
+    HEAD.appendChild(script);
+  }
+
+  function dark_giscus() {
+    const HEAD = check_giscus();
+    if (!HEAD) return;
+
+    const message = {
+      setConfig: {
+        theme: volantis.giscus.Theme
+      }
+    };
+    const giscusIframe = document.querySelector('iframe.giscus-frame');
+    giscusIframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+  }
+  pjax_giscus();
+  volantis.pjax.push(pjax_giscus);
+  volantis.dark.push(dark_giscus);
+</script>
+
+    
+
+
+
+
+
+<!-- optional -->
+
+  <script>
+  const SearchServiceDataPathRoot = ("/" || "/").endsWith("/") ?
+    "/" || "/" :
+    "//" || "/";
+  const SearchServiceDataPath = SearchServiceDataPathRoot + "content.json";
+
+  function loadSearchScript() {
+    // see: layout/_partial/scripts/_ctrl/cdnCtrl.ejs
+    return volantis.js("/js/search/hexo.js");
+  }
+
+  function loadSearchService() {
+    loadSearchScript();
+    document.querySelectorAll(".input.u-search-input").forEach((e) => {
+      e.removeEventListener("focus", loadSearchService, false);
+    });
+
+    document.querySelectorAll(".u-search-form").forEach((e) => {
+      e.addEventListener("submit", (event) => {
+        event.preventDefault();
+      }, false);
+    });
+  }
+
+  // 打开并搜索 字符串 s
+  function OpenSearch(s) {
+    if (typeof SearchService === 'undefined')
+      loadSearchScript().then(() => {
+        SearchService.setQueryText(s);
+        SearchService.search();
+      });
+    else {
+      SearchService.setQueryText(s);
+      SearchService.search();
+    }
+  }
+
+  // 访问含有 ?s=xxx  的链接时打开搜索 // 与搜索引擎 structured data 相关: /scripts/helpers/structured-data/lib/config.js
+  if (window.location.search && /^\?s=/g.test(window.location.search)) {
+    let queryText = decodeURI(window.location.search)
+      .replace(/\ /g, "-")
+      .replace(/^\?s=/g, "");
+    OpenSearch(queryText);
+  }
+
+  // 搜索输入框获取焦点时加载搜索
+  document.querySelectorAll(".input.u-search-input").forEach((e) => {
+    e.addEventListener("focus", loadSearchService, false);
+  });
+</script>
+
+
+
+
+
+
+
+  <script>
+
+
+
+  function pjax_highlightjs_copyCode(){
+    if (!(document.querySelector(".highlight .code pre") ||
+      document.querySelector(".article pre code"))) {
+      return;
+    }
+    VolantisApp.utilCopyCode(".highlight .code pre, .article pre code")
+  }
+  volantis.requestAnimationFrame(pjax_highlightjs_copyCode)
+  volantis.pjax.push(pjax_highlightjs_copyCode)
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  <script>
+  function load_swiper() {
+    if (!document.querySelectorAll(".swiper-container")[0]) return;
+    volantis.css("https://unpkg.com/volantis-static@0.0.1654736714924/libs/swiper/swiper-bundle.min.css");
+    volantis.js("https://unpkg.com/volantis-static@0.0.1654736714924/libs/swiper/swiper-bundle.min.js").then(() => {
+      pjax_swiper();
+    });
+  }
+
+  load_swiper();
+
+  function pjax_swiper() {
+    volantis.swiper = new Swiper('.swiper-container', {
+      slidesPerView: 'auto',
+      spaceBetween: 8,
+      centeredSlides: true,
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  }
+
+  volantis.pjax.push(() => {
+    if (!document.querySelectorAll(".swiper-container")[0]) return;
+    if (typeof volantis.swiper === "undefined") {
+      load_swiper();
+    } else {
+      pjax_swiper();
+    }
+  });
+</script>
+
+
+<!-- pjax 标签必须存在于所有页面 否则 pjax error -->
+<pjax>
+
+</pjax>
+
+<script>
+  function listennSidebarTOC() {
+    const navItems = document.querySelectorAll(".toc li");
+    if (!navItems.length) return;
+    let targets = []
+    const sections = [...navItems].map((element) => {
+      const link = element.querySelector(".toc-link");
+      const target = document.getElementById(
+        decodeURI(link.getAttribute("href")).replace("#", "")
+      );
+      targets.push(target)
+      // 解除 a 标签 href 的 锚点定位, a 标签 href 的 锚点定位 会随机启用?? 产生错位???
+      link.setAttribute("onclick","return false;")
+      link.setAttribute("toc-action","toc-"+decodeURI(link.getAttribute("href")).replace("#", ""))
+      link.setAttribute("href","/")
+      // 配置 点击 触发新的锚点定位
+      link.addEventListener("click", (event) => {
+        event.preventDefault();
+        // 这里的 addTop 是通过错位使得 toc 自动展开.
+        volantis.scroll.to(target,{addTop: 5, observer:true})
+        // Anchor id
+        history.pushState(null, document.title, "#" + target.id);
+      });
+      return target;
+    });
+
+    function activateNavByIndex(target) {
+      if (target.classList.contains("active-current")) return;
+
+      document.querySelectorAll(".toc .active").forEach((element) => {
+        element.classList.remove("active", "active-current");
+      });
+      target.classList.add("active", "active-current");
+      let parent = target.parentNode;
+      while (!parent.matches(".toc")) {
+        if (parent.matches("li")) parent.classList.add("active");
+        parent = parent.parentNode;
+      }
+    }
+
+    // 方案一：
+    volantis.activateNavIndex=0
+    activateNavByIndex(navItems[volantis.activateNavIndex])
+    volantis.scroll.push(()=>{
+      if (targets[0].getBoundingClientRect().top >= 0) {
+        volantis.activateNavIndex = 0
+      }else if (targets[targets.length-1].getBoundingClientRect().top < 0) {
+        volantis.activateNavIndex = targets.length-1
+      } else {
+        for (let index = 0; index < targets.length; index++) {
+          const target0 = targets[index];
+          const target1 = targets[(index+1)%targets.length];
+          if (target0.getBoundingClientRect().top < 0&&target1.getBoundingClientRect().top >= 0) {
+            volantis.activateNavIndex=index
+            break;
+          }
+        }
+      }
+      activateNavByIndex(navItems[volantis.activateNavIndex])
+    })
+
+    // 方案二：
+    // IntersectionObserver 不是完美精确到像素级别 也不是低延时性的
+    // function findIndex(entries) {
+    //   let index = 0;
+    //   let entry = entries[index];
+    //   if (entry.boundingClientRect.top > 0) {
+    //     index = sections.indexOf(entry.target);
+    //     return index === 0 ? 0 : index - 1;
+    //   }
+    //   for (; index < entries.length; index++) {
+    //     if (entries[index].boundingClientRect.top <= 0) {
+    //       entry = entries[index];
+    //     } else {
+    //       return sections.indexOf(entry.target);
+    //     }
+    //   }
+    //   return sections.indexOf(entry.target);
+    // }
+    // function createIntersectionObserver(marginTop) {
+    //   marginTop = Math.floor(marginTop + 10000);
+    //   let intersectionObserver = new IntersectionObserver(
+    //     (entries, observe) => {
+    //       let scrollHeight = document.documentElement.scrollHeight;
+    //       if (scrollHeight > marginTop) {
+    //         observe.disconnect();
+    //         createIntersectionObserver(scrollHeight);
+    //         return;
+    //       }
+    //       let index = findIndex(entries);
+    //       activateNavByIndex(navItems[index]);
+    //     }, {
+    //       rootMargin: marginTop + "px 0px -100% 0px",
+    //       threshold: 0,
+    //     }
+    //   );
+    //   sections.forEach((element) => {
+    //     element && intersectionObserver.observe(element);
+    //   });
+    // }
+    // createIntersectionObserver(document.documentElement.scrollHeight);
+  }
+
+  document.addEventListener("DOMContentLoaded", ()=>{
+    volantis.requestAnimationFrame(listennSidebarTOC)
+  });
+  document.addEventListener("pjax:success", ()=>{
+    volantis.requestAnimationFrame(listennSidebarTOC)
+  });
+</script>
+
+
+
+<script>
+  document.onreadystatechange = function () {
+    if (document.readyState == 'complete') {
+      // 页面加载完毕 样式加载失败，或是当前网速慢，或是开启了省流模式
+      const { saveData, effectiveType } = navigator.connection || navigator.mozConnection || navigator.webkitConnection || {}
+      if (getComputedStyle(document.querySelector("#safearea"), null)["display"] == "none" || saveData || /2g/.test(effectiveType)) {
+        document.querySelectorAll(".reveal").forEach(function (e) {
+          e.style["opacity"] = "1";
+        });
+        document.querySelector("#safearea").style["display"] = "block";
+      }
+    }
+  }
+</script>
+
+
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"当视研","url":"http://dsyacg.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"Alice.","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://dsyacg.github.io/","sameAs":["https://github.com/volantis-x"],"description":"当视研"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://dsyacg.github.io/","name":"当视研"}},{"@type":"ListItem","position":2,"item":{"@id":"http://dsyacg.github.io/categories/社员投稿/","name":"社员投稿"}},{"@type":"ListItem","position":3,"item":{"@id":"http://dsyacg.github.io/2024/09/20/sdvx简易教程/","name":"sdvx简易教程"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"当视研","url":"http://dsyacg.github.io/","keywords":"","description":"当视研","author":{"@type":"Person","name":"Alice.","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://dsyacg.github.io/","description":"当视研"},"publisher":{"@type":"Organization","name":"当视研","url":"http://dsyacg.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://dsyacg.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"sdvx简易教程","description":"当视研","inLanguage":"en","mainEntityOfPage":{"@type":"WebPage","@id":"http://dsyacg.github.io/2024/09/20/sdvx%E7%AE%80%E6%98%93%E6%95%99%E7%A8%8B/"},"author":{"@type":"Person","name":"Alice.","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://dsyacg.github.io/"},"publisher":{"@type":"Organization","name":"当视研","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://dsyacg.github.io/2024/09/20/sdvx%E7%AE%80%E6%98%93%E6%95%99%E7%A8%8B/","wordCount":0,"datePublished":"2024-09-20T07:16:44.000Z","dateModified":"2024-09-20T19:01:10.773Z","articleSection":"社员投稿","keywords":"音游,SDVX","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+
+
+
+      
+        <!--
+  pjax重载区域接口：
+  1.  <pjax></pjax> 标签 pjax 标签必须存在于所有页面 否则 pjax error
+  2.  script[data-pjax]
+  3.  .pjax-reload script
+  4.  .pjax
+-->
+
+
+
+<script src="https://unpkg.com/volantis-static@0.0.1654736714924/libs/pjax/pjax.min.js"></script>
+
+
+<script>
+    var pjax;
+    document.addEventListener('DOMContentLoaded', function () {
+      pjax = new Pjax({
+        elements: 'a[href]:not([href^="#"]):not([href="javascript:void(0)"]):not([pjax-fancybox]):not([onclick="return false;"]):not([onclick="return!1"]):not([target="_blank"]):not([target="view_window"]):not([href$=".xml"])',
+        selectors: [
+          "head title",
+          "head meta[name=keywords]",
+          "head meta[name=description]",
+          
+          "#l_main",
+          "#pjax-header-nav-list",
+          ".pjax",
+          "pjax", // <pjax></pjax> 标签
+          "script[data-pjax], .pjax-reload script" // script标签添加data-pjax 或 script标签外层添加.pjax-reload 的script代码段重载
+        ],
+        cacheBust: false,   // url 地址追加时间戳，用以避免浏览器缓存
+        timeout: 5000,
+        
+      });
+    });
+
+    document.addEventListener('pjax:send', function (e) {
+      //window.stop(); // 相当于点击了浏览器的停止按钮
+
+      try {
+        var currentUrl = window.location.pathname;
+        var targetUrl = e.triggerElement.href;
+        var banUrl = [""];
+        if (banUrl[0] != "") {
+          banUrl.forEach(item => {
+            if(currentUrl.indexOf(item) != -1 || targetUrl.indexOf(item) != -1) {
+              window.location.href = targetUrl;
+            }
+          });
+        }
+      } catch (error) {}
+
+      // 使用 volantis.pjax.send 方法传入pjax:send回调函数 参见layout/_partial/scripts/global.ejs
+      volantis.pjax.method.send.start();
+    });
+
+    document.addEventListener('pjax:complete', function () {
+      // 使用 volantis.pjax.push 方法传入重载函数 参见layout/_partial/scripts/global.ejs
+      volantis.pjax.method.complete.start();
+    });
+
+    document.addEventListener('pjax:error', function (e) {
+      if(volantis.debug) {
+        console.error(e);
+        console.log('pjax error: \n' + JSON.stringify(e));
+      }else{
+        // 使用 volantis.pjax.error 方法传入pjax:error回调函数 参见layout/_partial/scripts/global.ejs
+        volantis.pjax.method.error.start();
+        window.location.href = e.triggerElement.href;
+      }
+    });
+</script>
+
+      
+    </div>
+    <!-- import body_end begin-->
+    <!-- import body_end end-->
+    <!-- Custom Files bodyEnd begin-->
+    
+    <!-- Custom Files bodyEnd end-->
+    <!-- front-matter body_end begin -->
+    <!-- front-matter body_end end -->
+  </body>
+</html>
